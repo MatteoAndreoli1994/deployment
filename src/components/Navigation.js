@@ -8,7 +8,7 @@ import Telegram from "../assets/social-media-icons/Telegram.png"
 
 const Section = styled.section`
 width: 100vw;
-background-color: #3EA39E;
+background-color: ${props => props.theme.body};
 display: flex;
 justify-content: center;
 align-items: center;
