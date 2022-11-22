@@ -138,10 +138,10 @@ background-color:blue;
 `
 
 const HamburgerContainer = styled.div`
-width: ${props => props.click ? '4rem' : '2rem'};;
+width: ${props => props.click ? '5rem' : '2rem'};;
 height: 2rem;
 position: absolute;
-top: 3rem;
+top: ${props => props.click ? '2rem' : '3rem' };
 left: 50%;
 transform: ${props => props.click ? 'translateX(-50%) rotate(90deg)' : 'translateX(-50%) rotate(0)'};
 display: flex;
