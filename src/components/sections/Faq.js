@@ -42,7 +42,7 @@ color: white;
 
 const Faq = () => {
   return (
-    <Section>
+    <Section id="faq">
       <Title>Faq</Title>
       <Container>
         <Box>

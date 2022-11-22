@@ -109,7 +109,7 @@ const MemberComponent = ({img, name="", position=""}) => {
 
 const Team = () => {
   return (
-    <Section>
+    <Section id="team">
       <Title> Team</Title>
       <Container>
           <MemberComponent img={img1} name="Matteo" position="Code Developer"/>

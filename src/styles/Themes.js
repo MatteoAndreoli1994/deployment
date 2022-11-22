@@ -2,6 +2,7 @@ export const light = {
     body:"#58C0BA",
     text: "black",
     bodyRgba : "0, 0, 0",
+    bodyRgba2 : "255, 255, 255",
     textRgba:"255,255,255",
     textRgba2:"0, 0, 0",
 

@@ -84,7 +84,7 @@ const MainMint = ({ accounts, setAccounts }) => {
     };
 
     return (
-    <Section>
+    <Section id="mint">
         <Minting>
             
             

@@ -13,7 +13,7 @@ color: ${props => props.theme.text};
 transition: all 0.2s ease;
 display: flex;
 margin-left: 0%;
-margin-top: 1%;
+margin-top: 1.5%;
 &:hover{
     transform: scale(1.1);
 }

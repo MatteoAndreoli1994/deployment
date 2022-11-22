@@ -65,7 +65,7 @@ align-item: center;
 
 export const About = () => {
   return (
-    <Section>
+    <Section id="about">
       <Container>
         <Box>
           <Carousel />

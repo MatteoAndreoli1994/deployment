@@ -49,7 +49,7 @@ align-items: center;
 
 const Roadmap = () => {
   return (
-    <Section>
+    <Section id="roadmap">
 
       <Title>
       Roadmap
