@@ -110,7 +110,7 @@ position: relative;
 }
 
 @media (max-width: 64em){
-  transform: scale(0.8);
+  transform: scale(0.7);
   width: 20vh;
   }
 `
@@ -221,9 +221,7 @@ const Navigation = ({ accounts, setAccounts }) => {
         {isConnected ?(
                 <p>Connected</p>
             ) : (
-              <Btn onClick={connectAccount}>
-              Connect Wallet
-              </Btn>
+              <Btn onClick={connectAccount}>Connect Wallet</Btn>
             )}
 
       </Navbar>
