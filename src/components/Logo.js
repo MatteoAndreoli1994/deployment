@@ -25,7 +25,6 @@ height: 100px;
 
 
 @media (max-width: 64em){
-  
   width: 146px;
   height: 66px;
   }

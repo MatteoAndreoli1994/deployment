@@ -108,6 +108,11 @@ position: relative;
     transform: translate(-50%, -50%) scale(1);
     padding: 0.3rem;
 }
+
+@media (max-width: 64em){
+  transform: scale(0.8);
+  width: 20vh;
+  }
 `
 
 const MenuSocial = styled.div`
