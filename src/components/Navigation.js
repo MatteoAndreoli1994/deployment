@@ -147,7 +147,7 @@ transform: ${props => props.click ? 'translateX(-50%) rotate(90deg)' : 'translat
 display: flex;
 justify-content: center;
 align-items:center;
-transition: all 0.3s ease;
+
 cursor: pointer;
 display: none;
 
@@ -162,13 +162,13 @@ width: ${props => props.click ? '2rem' : '1.5rem' };
 height: 2px;
 background: black;
 position: absolute;
-
+transition: all 0.2s ease;
 left: 50%;
 transform: ${props => props.click ? '' : 'translateX(-50%) rotate(0)'};
 display: flex;
 justify-content: center;
 align-items:center;
-transition: all 0.3s ease;
+
 cursor: pointer;
 display: none;
 
