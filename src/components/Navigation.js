@@ -13,6 +13,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 
+
 `
 
 const Navbar = styled.section`
@@ -38,7 +39,7 @@ list-style: none;
   bottom: 0;
   backdrop-filter: blur(2px);
 
-  transform: ${props => props.click ? 'translateY(0)' : 'translateY(100%)'};
+  transform: ${props => props.click ? `translateY(0)` : `translateY(100%)`};
   transition: all 0.3s ease;
   align-items: center;
   width: 100vw;
@@ -110,11 +111,15 @@ position: relative;
 }
 
 @media (max-width: 64em){
-  transform: scale(0.7);
-  width: 20vh;
+  transform: scale(0.75);
   }
 `
-
+const ResultConnection = styled.p`
+display: inline-block;
+padding: 0.9rem 2.3rem;
+border-radius: 50px;
+position: relative;
+`
 const MenuSocial = styled.div`
 display:flex;
 height: 100%;
@@ -131,15 +136,35 @@ background-color:blue;
   }
 }
 `
+
+const HamburgerContainer = styled.div`
+width: ${props => props.click ? '4rem' : '2rem'};;
+height: 2rem;
+position: absolute;
+top: 3rem;
+left: 50%;
+transform: ${props => props.click ? 'translateX(-50%) rotate(90deg)' : 'translateX(-50%) rotate(0)'};
+display: flex;
+justify-content: center;
+align-items:center;
+transition: all 0.3s ease;
+cursor: pointer;
+display: none;
+
+@media (max-width: 64em){
+  display:flex;
+}
+`
+
 const HamburgerMenu = styled.span`
 
 width: ${props => props.click ? '2rem' : '1.5rem' };
 height: 2px;
 background: black;
 position: absolute;
-top: 4rem;
+
 left: 50%;
-transform: ${props => props.click ? 'translateX(-50%) rotate(90deg)' : 'translateX(-50%) rotate(0)'};
+transform: ${props => props.click ? '' : 'translateX(-50%) rotate(0)'};
 display: flex;
 justify-content: center;
 align-items:center;
@@ -204,9 +229,12 @@ const Navigation = ({ accounts, setAccounts }) => {
       <Navbar>
 
       <Logo />
-      <HamburgerMenu click={click} onClick={() => setClick(!click)}>
-        &nbsp;
-      </HamburgerMenu>
+      <HamburgerContainer click={click} onClick={() => setClick(!click)}>
+      
+        <HamburgerMenu click={click} onClick={() => setClick(!click)}>
+          
+        </HamburgerMenu>
+      </HamburgerContainer>
 
         <Menu click={click}>
           <MenuItem onClick={()=> scrollTo('home')}>Home</MenuItem>
@@ -219,7 +247,7 @@ const Navigation = ({ accounts, setAccounts }) => {
 
         </Menu>
         {isConnected ?(
-                <p>Connected</p>
+                <ResultConnection>Connected</ResultConnection>
             ) : (
               <Btn onClick={connectAccount}>Connect Wallet</Btn>
             )}

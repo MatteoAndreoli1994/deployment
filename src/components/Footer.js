@@ -41,7 +41,7 @@ position: relative;
 `
 const Section = styled.div`
 
-height:30vh;
+
 width:100vw;
 background-color: #58C0BA;
 position: relative;
