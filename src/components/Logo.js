@@ -14,11 +14,22 @@ transition: all 0.2s ease;
 display: flex;
 margin-left: 0%;
 margin-top: 1.5%;
+
 &:hover{
     transform: scale(1.1);
 }
 `
+const ImmagineLogo = styled.img`
+width: 220px;
+height: 100px;
 
+
+@media (max-width: 64em){
+  
+  width: 146px;
+  height: 66px;
+  }
+`
 
 const Logo = () => {
   return (
@@ -26,7 +37,7 @@ const Logo = () => {
         
             <Link to="/">
                 
-                <img style={{ width: 220, height: 100 }} src={Marchio} alt=""/>
+                <ImmagineLogo src={Marchio} alt=""/>
             </Link>
         
 

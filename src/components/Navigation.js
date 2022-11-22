@@ -36,11 +36,18 @@ list-style: none;
   left: 0;
   right: 0;
   bottom: 0;
+  backdrop-filter: blur(2px);
+
+  transform: ${props => props.click ? 'translateY(0)' : 'translateY(100%)'};
+  transition: all 0.3s ease;
   align-items: center;
   width: 100vw;
   height: ${props => `calc(100vh - ${props.theme.navHeight})`};
   z-index:50;
   background-color: ${props => `rgba(${props.theme.bodyRgba2},0.9 )`};
+
+  flex-direction: column;
+  justify-content: center;
 }
 `
 const MenuItem = styled.li`
@@ -59,7 +66,13 @@ cursor: pointer;
 &:hover::after{
   width: 100%;
 }
+@media (max-width: 64em){
+  margin: 1rem 0;
 
+  &::after{
+     display: none;
+  }
+}
 `
 const Btn = styled.button`
 display: inline-block;
@@ -166,6 +179,8 @@ const Navigation = ({ accounts, setAccounts }) => {
       block: 'start',
       inline: 'nearest',
     })
+
+    setClick(!click);
   }
 
   async function connectAccount(){
@@ -188,7 +203,7 @@ const Navigation = ({ accounts, setAccounts }) => {
         &nbsp;
       </HamburgerMenu>
 
-        <Menu>
+        <Menu click={click}>
           <MenuItem onClick={()=> scrollTo('home')}>Home</MenuItem>
           <MenuItem onClick={()=> scrollTo('about')}>About</MenuItem>
           <MenuItem onClick={()=> scrollTo('roadmap')}>RoadMap</MenuItem>
