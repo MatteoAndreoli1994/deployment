@@ -39,8 +39,8 @@ list-style: none;
   bottom: 0;
   backdrop-filter: blur(2px);
 
-  transform: ${props => props.click ? `translateY(0)` : `translateY(100%)`};
-  transition: all 0.3s ease;
+  transform: ${props => props.click ? `translateY(0)` : `translateY(+2000%)`};
+  
   align-items: center;
   width: 100vw;
   height: ${props => `calc(100vh - ${props.theme.navHeight})`};
