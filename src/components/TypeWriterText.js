@@ -27,6 +27,7 @@ font-size: 2em;
 text-trasform: capitalize;
 width: 80%;
 align-self:flex-start;
+margin-top: 0.5rem;
 
 @media (max-width: 70em){
   font-size: 1em;

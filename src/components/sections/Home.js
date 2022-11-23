@@ -29,27 +29,38 @@ align-items:center;
   &>*:first-child{
     width: 100%;
     margin-top: 2rem;
+
   }
+
 } 
 `
 const Box = styled.div`
-
+width: 50%;
+height: 100%;
+display: flex;
+flex-direction: column;
+Justify-content: center;
+`
+const Box2 = styled.div`
 width: 50%;
 height: 100%;
 display: flex;
 flex-direction: column;
 Justify-content: center;
 
+@media (max-width: 48em){
+  width: 80%;
+
+} 
 
 `
-
 
 export const Home = () => {
   return (
     <Section id="home">
       <Container>
       <Box> <TypeWriterText/> </Box>
-      <Box> <CoverVideo/> </Box>
+      <Box2> <CoverVideo/> </Box2>
       </Container>
       
     </Section>
