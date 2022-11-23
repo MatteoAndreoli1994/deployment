@@ -46,6 +46,7 @@ width: 50%;
 height: 100%;
 display: flex;
 flex-direction: column;
+align-items:center;
 Justify-content: center;
 
 @media (max-width: 48em){
