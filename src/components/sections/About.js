@@ -42,6 +42,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 position: relative;
+overflow: hidden;
 `
 const Container = styled.div`
 width: 75%;
