@@ -19,6 +19,18 @@ background-color: ${props => props.theme.body};
 display: flex;
 justify-content: center;
 align-items:center;
+
+@media (max-width: 64em){
+  width: 85%;
+}
+@media (max-width: 48em){
+  flex-direction: column-reverse;
+
+  &>*:first-child{
+    width: 100%;
+    margin-top: 2rem;
+  }
+} 
 `
 const Box = styled.div`
 

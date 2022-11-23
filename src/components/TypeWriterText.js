@@ -7,12 +7,47 @@ import Button from './Button';
 const Title = styled.h2`
 font-size: ${props => props.theme.fontxxl};
 text-transform: capitalize;
+width: 80%;
+align-self:flex-start;
+
+@media (max-width: 80em){
+  font-size: 2.5em;
+} 
+
+@media (max-width: 70em){
+  font-size: 2em;
+} 
+@media (max-width: 48em){
+  align-self: center;
+  text-align: center;
+}
+`
+const Subtitle = styled.h1`
+font-size: 2em;
+text-trasform: capitalize;
+width: 80%;
+align-self:flex-start;
+
+@media (max-width: 70em){
+  font-size: 1em;
+
+}
+@media (max-width: 48em){
+  align-self: center;
+  text-align: center;
+}
 `
 const ButtonContainer = styled.div`
 width: 100%;
 margin-top: 1rem;
 
+@media (max-width: 48em){
+
+  align-self: center;
+  text-align: center;
+} 
 `
+
 
 export const TypeWriterText = () => {
   return (
@@ -20,18 +55,18 @@ export const TypeWriterText = () => {
     
     <Title>
         
-        Scopri il mondo fantastico di GameBoyzColor
+    Welcome to the GameBoyz Color Club World
         
     </Title>
     
 
 
 
-    <h1>
+    <Subtitle>
         <Fade cascade damping={0.1} delay={1000}>
         Play, earn & have fun.
         </Fade>
-    </h1>
+    </Subtitle>
 
     <ButtonContainer>
     <Button text="Explore" link="#about" />
