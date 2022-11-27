@@ -143,9 +143,6 @@ align-items: center;
 
 
 
-@media (max-width: 40em){
-  
-}
 
 
 `
