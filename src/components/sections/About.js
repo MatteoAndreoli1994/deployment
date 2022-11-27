@@ -155,7 +155,7 @@ export const About = () => {
           <Carousel />
         </Box>
         <Box>
-          <Title> Welcome to <br /> the <br />Game Boyz Color Club. </Title>
+          <Title> Welcome to the <br />Game Boyz Color Club. </Title>
           <SubText> Game Boyz Color Club is a private collection of NFTs-unique digital collectibles.
             The GameBoyz are stored as ERC-721 tokens on the Binance Smart Chain and hosted on IPFS. 
           </SubText>
