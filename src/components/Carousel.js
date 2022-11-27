@@ -19,8 +19,8 @@ height: 50%;
 
 
 @media (max-width: 64em){
-  width: 70%;
-  height: 70%;
+  width: 100%;
+  height: 100%;
 }
 
 

@@ -56,7 +56,7 @@ export const TypeWriterText = () => {
     
     <Title>
         
-    Welcome to the GameBoyz Color Club World
+    Welcome to GameBoyz Color Club World
         
     </Title>
     

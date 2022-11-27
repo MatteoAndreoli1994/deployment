@@ -115,7 +115,7 @@ align-items:center;
 @media (max-width: 64em){
   width: 100%;
   flex-direction: column;
-  margin-top: 1rem;
+  
   &>*:last-child{
     width: 80%;
 
@@ -155,7 +155,7 @@ export const About = () => {
           <Carousel />
         </Box>
         <Box>
-          <Title> Welcome to the <br />Game Boyz Color Club. </Title>
+          <Title> Play with us and start earning </Title>
           <SubText> Game Boyz Color Club is a private collection of NFTs-unique digital collectibles.
             The GameBoyz are stored as ERC-721 tokens on the Binance Smart Chain and hosted on IPFS. 
           </SubText>
