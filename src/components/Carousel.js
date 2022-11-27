@@ -19,8 +19,8 @@ height: 27vw;
 
 
 @media (max-width: 64em){
-  min-width: 40vw;
-  min-height: 40vh;
+  width: 40vw;
+  height: 40vh;
 }
 
 
