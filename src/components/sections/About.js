@@ -10,12 +10,35 @@ text-transform: capitalize;
 align-self: flex-start;
 margin: 1rem auto;
 width: 80%;
+
+@media (max-width: 60em){
+  width: 100%;
+  text-align:center;
+}
+@media (max-width: 40em){
+  width: 100%;
+  text-align:center;
+  font-size: ${props => props.theme.fontxl};
+}
+@media (max-width: 30em){
+  width: 100%;
+  text-align:center;
+  font-size: ${props => props.theme.fontlg};
+}
 `
 const ButtonContainer = styled.div`
 width: 80%;
 margin-top: 1rem;
 margin: 1rem auto;
 align-self: flex-start;
+display:flex;
+
+@media (max-width: 64em){
+  width: 100%;
+  button{
+    margin: 0 auto;
+  }
+}
 `
 const SubText = styled.p`
 font-size: ${props => props.theme.fontlg};
@@ -24,6 +47,22 @@ align-self: flex-start;
 width: 80%;
 margin: 1rem auto;
 font-weight: 400;
+
+@media (max-width: 60em){
+  width: 100%;
+  text-align:center;
+  font-size: ${props => props.theme.fontmd};
+}
+@media (max-width: 40em){
+  width: 100%;
+  text-align:center;
+  font-size: ${props => props.theme.fontmd};
+}
+@media (max-width: 30em){
+  width: 100%;
+  text-align:center;
+  font-size: ${props => props.theme.fontsm};
+}
 `
 const SubTextLight = styled.section`
 font-size: ${props => props.theme.fontmd};
@@ -32,6 +71,22 @@ align-self: flex-start;
 width: 80%;
 margin: 1rem auto;
 font-weight: 400;
+
+@media (max-width: 60em){
+  width: 100%;
+  text-align:center;
+  font-size: ${props => props.theme.fontsm};
+}
+@media (max-width: 40em){
+  width: 100%;
+  text-align:center;
+  font-size: ${props => props.theme.fontsm};
+}
+@media (max-width: 30em){
+  width: 100%;
+  text-align:center;
+  font-size: ${props => props.theme.fontxs};
+}
 `
 const Section = styled.section`
 min-height: 100vh;
@@ -51,15 +106,43 @@ margin: 0 auto;
 display: flex;
 justify-content: center;
 align-items:center;
+
+@media (max-width: 70em){
+  width: 85%;
+}
+
+
+@media (max-width: 64em){
+  width: 100%;
+  flex-direction: column;
+  margin-top: 1rem;
+  &>*:last-child{
+    width: 80%;
+
+  }
+
+  @media (max-width: 40em){
+
+    &>*:last-child{
+      width: 90%;
+  
+    }
+
+}
 `
 const Box = styled.div`
 
 width: 50%;
 height: 100%;
 display: flex;
+min-height: 60vh;
 flex-direction: column;
 Justify-content: center;
-align-item: center;
+align-items: center;
+
+@media (max-width: 40em){
+  min-height: 50vh;
+}
 
 
 `
@@ -72,7 +155,7 @@ export const About = () => {
           <Carousel />
         </Box>
         <Box>
-          <Title> Welcome to the Game Boyz Color Club. </Title>
+          <Title> Welcome to <br /> the <br />Game Boyz Color Club. </Title>
           <SubText> Game Boyz Color Club is a private collection of NFTs-unique digital collectibles.
             The GameBoyz are stored as ERC-721 tokens on the Binance Smart Chain and hosted on IPFS. 
           </SubText>
