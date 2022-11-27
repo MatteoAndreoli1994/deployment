@@ -102,6 +102,7 @@ overflow: hidden;
 const Container = styled.div`
 width: 75%;
 margin: 0 auto;
+background-color:green;
 
 display: flex;
 justify-content: center;
@@ -139,9 +140,11 @@ min-height: 60vh;
 flex-direction: column;
 Justify-content: center;
 align-items: center;
+background-color:red;
+
 
 @media (max-width: 40em){
-  min-height: 50vh;
+  width: 100%;
 }
 
 

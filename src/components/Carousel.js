@@ -14,13 +14,13 @@ import img2 from '../assets/nfts/2.jpg';
 import img3 from '../assets/nfts/3.jpg';
 import img4 from '../assets/nfts/4.png';
 const Container = styled.div`
-width: 50%;
-height: 50%;
+width: 50vh;
+height: 50vh;
 
 
 @media (max-width: 64em){
-  width: 100%;
-  height: 100%;
+  width: 50vh;
+  height: 50vh;
 }
 
 
