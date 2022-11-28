@@ -152,7 +152,7 @@ export const About = () => {
     <Section id="about">
       <Container>
         <Box>
-          <Carousel />
+          
         </Box>
         <Box>
           <Title> Play with us and start earning </Title>
