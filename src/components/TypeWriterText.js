@@ -18,6 +18,8 @@ align-self:flex-start;
   font-size: 2em;
 } 
 @media (max-width: 48em){
+  font-size: ${props => props.theme.fontl};
+  margin: 1rem auto;
   align-self: center;
   text-align: center;
 }
@@ -27,7 +29,7 @@ font-size: 2em;
 text-trasform: capitalize;
 width: 80%;
 align-self:flex-start;
-margin-top: 0.5rem;
+margin-top: 1em;
 
 @media (max-width: 70em){
   font-size: 1em;
@@ -36,14 +38,15 @@ margin-top: 0.5rem;
 @media (max-width: 48em){
   align-self: center;
   text-align: center;
+  margin: 1em auto;
+ 
 }
 `
 const ButtonContainer = styled.div`
 width: 100%;
-margin-top: 1rem;
-
+margin-top: 1em;
 @media (max-width: 48em){
-
+  margin: 0;
   align-self: center;
   text-align: center;
 } 

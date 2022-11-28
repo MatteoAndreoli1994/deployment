@@ -45,6 +45,7 @@ Justify-content: center;
   width: 100%;
     margin: 0 auto;
     margin-bottom: 1rem;
+
 }
 `
 const Box2 = styled.div`
