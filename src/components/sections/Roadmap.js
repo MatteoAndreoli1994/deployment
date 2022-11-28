@@ -105,9 +105,10 @@ height:100%;
 width:100%;
 background-image: url(${Vignetta});
 
-height: 22vh;
-width: 60vw;
+height: 24vh;
+width: 80vw;
 margin: 1em;
+
 align-items: center;
 display: flex;
 flex-direction: column;
@@ -135,7 +136,7 @@ display:flex;
 margin-left: 2em;
 margin-right: 2em;
 text-align: center;
-
+margin-bottom: 2em;
 @media (max-width: 60em){
 
 
