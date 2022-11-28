@@ -19,16 +19,18 @@ width: 80%;
   width: 100%;
   text-align:center;
   font-size: ${props => props.theme.fontxl};
+  margin: 0.5rem auto;
 }
 @media (max-width: 30em){
   width: 100%;
   text-align:center;
   font-size: ${props => props.theme.fontlg};
+  margin: 0.5rem auto;
 }
+
 `
 const ButtonContainer = styled.div`
 width: 80%;
-margin-top: 1rem;
 margin: 1rem auto;
 align-self: flex-start;
 display:flex;
@@ -39,6 +41,10 @@ display:flex;
     margin: 0 auto;
   }
 }
+  @media (max-width: 30em){
+    width: 100%;
+    margin: 0 auto;
+  }
 `
 const SubText = styled.p`
 font-size: ${props => props.theme.fontlg};
@@ -62,6 +68,7 @@ font-weight: 400;
   width: 100%;
   text-align:center;
   font-size: ${props => props.theme.fontsm};
+  margin: 0 auto;
 }
 `
 const SubTextLight = styled.section`
@@ -86,6 +93,8 @@ font-weight: 400;
   width: 100%;
   text-align:center;
   font-size: ${props => props.theme.fontxs};
+  margin-top: 0.2 auto;
+  
 }
 `
 const Section = styled.section`
@@ -101,6 +110,7 @@ overflow: hidden;
 `
 const Container = styled.div`
 width: 75%;
+min-height: 80vh;
 margin: 0 auto;
 
 
@@ -136,12 +146,15 @@ const Box = styled.div`
 width: 50%;
 height: 100%;
 display: flex;
-min-height: 60vh;
+min-height: 50vh;
 flex-direction: column;
 Justify-content: center;
 align-items: center;
 
+@media (max-width: 64em){
+  width: 80%;
 
+}
 
 
 
@@ -152,7 +165,7 @@ export const About = () => {
     <Section id="about">
       <Container>
         <Box>
-          
+          <Carousel />
         </Box>
         <Box>
           <Title> Play with us and start earning </Title>

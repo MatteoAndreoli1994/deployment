@@ -40,6 +40,12 @@ height: 100%;
 display: flex;
 flex-direction: column;
 Justify-content: center;
+
+@media (max-width: 64em){
+  width: 100%;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+}
 `
 const Box2 = styled.div`
 width: 50%;

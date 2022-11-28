@@ -36,6 +36,9 @@ position: relative;
     padding: 0.3rem;
 }
 
+@media (max-width: 25em){
+  transform: scale(0.75);
+  }
 `
 
 
