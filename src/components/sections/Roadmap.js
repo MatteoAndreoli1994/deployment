@@ -105,9 +105,9 @@ height:100%;
 width:100%;
 background-image: url(${Vignetta});
 
-height: 24vh;
-width: 80vw;
-margin: 1em;
+height: 20vh;
+width: 60vw;
+margin: auto;
 
 align-items: center;
 display: flex;
@@ -135,8 +135,10 @@ font-size: ${props => props.theme.fonts};
 display:flex;
 margin-left: 2em;
 margin-right: 2em;
+
 text-align: center;
 margin-bottom: 2em;
+
 @media (max-width: 60em){
 
 
