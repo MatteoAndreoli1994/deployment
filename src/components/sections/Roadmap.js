@@ -15,7 +15,7 @@ background-color:red;
 align-items: center;
 justify-content: center;
 display: flex;
-margin-top:2rem;
+margin-top: 1rem;
 
 
 `
@@ -23,7 +23,8 @@ const TitoloVignetta = styled.h2`
 font-size: ${props => props.theme.fontxl};
 
 display:flex;
-margin: 1em;
+margin-bottom: 0.5rem;
+margin-top: 0.5rem;
 
 @media (max-width: 60em){
 
@@ -105,39 +106,44 @@ height:100%;
 width:100%;
 background-image: url(${Vignetta});
 
-height: 20vh;
-width: 60vw;
-margin: auto;
+height: 15vh;
+width: 40vw;
 
+margin: 1em;
 align-items: center;
 display: flex;
 flex-direction: column;
 
 @media (max-width: 60em){
-  height: 30vh;
+  height: 15vh;
   width: 80vw;
   margin: 0.1em;
 }
 @media (max-width: 40em){
-  height: 30vh;
+  height: 15vh;
   width: 80vw;
   margin: 0.5em;
 }
 @media (max-width: 30em){
-  height: 30vh;
+  height: 16vh;
   width: 80vw;
-  margin: 0.2em;
+  margin: 1em;
+}
+@media (max-width: 20em){
+  height: 21vh;
+  width: 80vw;
+  margin: 0.8em;
 }
 `
 const Descrizione = styled.p`
-font-size: ${props => props.theme.fonts};
+font-size: ${props => props.theme.fontsm};
 
 display:flex;
 margin-left: 2em;
 margin-right: 2em;
 
 text-align: center;
-margin-bottom: 2em;
+margin-bottom: 1em;
 
 @media (max-width: 60em){
 
