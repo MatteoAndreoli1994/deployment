@@ -120,7 +120,7 @@ flex-direction: column;
   margin: 0.1em;
 }
 @media (max-width: 40em){
-  height: 15vh;
+  height: 16vh;
   width: 80vw;
   margin: 0.5em;
 }
@@ -130,7 +130,7 @@ flex-direction: column;
   margin: 1em;
 }
 @media (max-width: 20em){
-  height: 21vh;
+  height: 22vh;
   width: 80vw;
   margin: 0.8em;
 }
