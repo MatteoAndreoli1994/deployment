@@ -105,12 +105,14 @@ flex-direction: column;
 }
 @media (max-width: 30em){
   max-width: 80vw;
-  max-height: 70vw;
+  
   margin: 1em;
 }
 @media (max-width: 20em){
   max-width: 80vw;
-  margin: 0.8em;
+  max-height: 70vw;
+  margin: 0.5em;
+  
 }
 `
 const Descrizione = styled.p`
@@ -118,8 +120,8 @@ font-size: ${props => props.theme.fontsm};
 
 display:flex;
 margin: 2em;
+flex-direction: column;
 
-text-align: center;
 
 
 @media (max-width: 60em){
@@ -136,6 +138,9 @@ text-align: center;
 }
 
 `
+const Link = styled.a`
+
+`
 
 const Roadmap = () => {
   return (
@@ -150,46 +155,43 @@ const Roadmap = () => {
 
             <Test>
               <TitoloVignetta>
-                WhiteList 1st Fase
+                1ST FASE ALLOWLIST
               </TitoloVignetta>
-              <Descrizione>Early stage stealth WhiteList edjne d d ed e er f er er e te t t t t e w tettwt tw tw tw tw tw PancakeSwap has the most users of any decentralized platform, ever.
-And those users are now entrusting the platform with over $6.1 billion in funds. PancakeSwap has the most users of any decentralized platform, ever.
-And those users are now entrusting the platform with over $6.1 billion in funds. PancakeSwap has the most users of any decentralized platform, ever.
-And those users are now entrusting the platform with over $6.1 billion in funds.[LINK]</Descrizione>
+              <Descrizione>Early stage of the project, 20 AllowList earned through giveaways and raffle.</Descrizione>
 
             </Test>
 
             <Test>
               <TitoloVignetta>
-                WhiteList 1st Fase
+                2ND FASE ALLOWLIST
               </TitoloVignetta>
-              <Descrizione>Early stage</Descrizione>
+              <Descrizione>Interactive phase, development of a gaming hub to grant the latest 180 WhiteList to the most talented gamer or artist.</Descrizione>
 
             </Test>
 
             <Test>
               <TitoloVignetta>
-                WhiteList 1st Fase
+                MINT
               </TitoloVignetta>
-              <Descrizione>Early stage</Descrizione>
-
+              <Descrizione>The mint process will be supported by a system that offers incentives for our clients.</Descrizione>
+              
             </Test>
 
             <Test>
               <TitoloVignetta>
-                WhiteList 1st Fase
+                GBCC WEBGAME
               </TitoloVignetta>
-              <Descrizione>Early stage</Descrizione>
-
+              <Descrizione>Release of our main mini-game project for all GBCC Holders.</Descrizione>
+              
             </Test>
-
             <Test>
               <TitoloVignetta>
-                WhiteList 1st Fase wewkhewiuhe
+              Release of Roadmap 2.0
               </TitoloVignetta>
-              <Descrizione>Early stag weiuwe ewiuw weiugwe uihweg weuigweb ewuighew ewuygw ewguie</Descrizione>
-
+              <Descrizione>New Secret experiment.</Descrizione>
+              
             </Test>
+
         </ContainerVignette>
 
       </Container>
