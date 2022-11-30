@@ -6,12 +6,11 @@ import SfondoMint from "./assets/background/sfondo-mint.png"
 const GameBoyzColorClubTestFinalAddress = "0x745ADC1a54F162A3d91c6BBD86B281CA6a8aFf2d"
 
 const Section = styled.div`
-width:100vw;
-min-height:100vh;
-background-color: ${props => props.theme.body};
+
+background-size:100% 100%;
+
 background-image: url(${SfondoMint});
-object-fit: cover;
-background-size: cover;
+
 justify-content: center;
 display: flex;
 `
