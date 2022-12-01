@@ -26,7 +26,7 @@ align-items: center;
 justify-content: center;
 display: flex;
 position: relative;
-background-color:green;
+
 `
 const MinterContainer= styled.div`
 
