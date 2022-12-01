@@ -2,27 +2,66 @@ import { useState } from "react";
 import { ethers, BigNumber} from 'ethers';
 import GameBoyzColorClubTestFinal from './GameBoyzColorClubTestFinal.json';
 import styled from "styled-components";
-import SfondoMint from "./assets/background/sfondo-mint.png"
+import SfondoMint from "./assets/background/sfondo_gradient.png"
+import Gameboy from "./assets/elements/minter.png"
+import TastoA from "./assets/elements/tastoA.png"
+
 const GameBoyzColorClubTestFinalAddress = "0x745ADC1a54F162A3d91c6BBD86B281CA6a8aFf2d"
 
 const Section = styled.div`
-
-background-size:100% 100%;
+min-height: 100vh;
+width: 100vw;
 
 background-image: url(${SfondoMint});
-
-justify-content: center;
-display: flex;
+object-fit: cover;
+background-size: cover;
+overflow: hidden;
 `
 const Minting = styled.div`
-width:70vw;
-height:30vh;
-flex-direction: column;
-position: relative;
-margin-top: 39vw;
+width:100vw;
+height:50vh;
+margin-top: 25vh;
 
+align-items: center;
+justify-content: center;
+display: flex;
+position: relative;
+background-color:green;
+`
+const MinterContainer= styled.div`
+
+width:40%;
+padding-bottom:40%;
+
+background-size:100% 100%;
+background-image: url(${Gameboy});
+object-fit: cover;
+background-size: cover;
 
 `
+const BtnA= styled.button`
+width:2.5%;
+padding-bottom:2.5%;
+
+
+position: absolute;
+margin-top: 24.4%;
+margin-left: 20.3%;
+border: none;
+background-color: rgba(0,0,0,0);
+transform: scale(1.5);
+background-size:100% 100%;
+background-image: url(${TastoA});
+object-fit: cover;
+background-size: cover;
+
+&:active{
+    transform: scale(2.5);
+
+}
+
+`
+
 const Title = styled.h2`
 font-size: ${props => props.theme.fontxxl};
 text-transform: capitalize;
@@ -32,22 +71,31 @@ font-size: ${props => props.theme.fontmd};
 color: ${props => `rgba(${props.theme.bodyRgba},0.6)`};;
 font-weight: 400;
 `
-const SubText = styled.p`
-font-size: ${props => props.theme.fontlg};
+const SubTextContainer = styled.div`
 
-
-font-weight: 400;
+background-color:red;
+margin-bottom:20vh;
 justify-content: center;
 
 text-align: center;
 `
+
+const SubText = styled.p`
+font-size: ${props => props.theme.fonts};
+
+
+font-weight: 400;
+
+`
 const Warn = styled.p`
-font-size: ${props => props.theme.fontlg};
+font-size: ${props => props.theme.fonts};
 
 justify-content: center;
 align-items: center;
 text-align: center;
 `
+
+
 const MainMint = ({ accounts, setAccounts }) => {
     const [mintAmount, setMintAmount] = useState(1);
     const isConnected = Boolean(accounts[0]);
@@ -85,25 +133,13 @@ const MainMint = ({ accounts, setAccounts }) => {
     return (
     <Section id="mint">
         <Minting>
-            
-            
-            <SubText>
-            <SubTextLight>Collection of 2000 unique digital collectibles</SubTextLight>
-            {isConnected ? (
-                <div>
-                    <div>
-                        <button onClick={handleDecrement}>-</button>
-                        <input type="number" value={mintAmount}/>
-                        <button onClick={handleIncrement}>+</button>
-                    </div>
-                    <button onClick={handleMint}>Mint Now</button>
-                </div>
-            ) : (
-                <Warn> You Must be Connect to Mint</Warn>
-            )}
+            <MinterContainer>
+                <BtnA></BtnA>
+            </MinterContainer>
 
-            </SubText>
+
         </Minting>
+
     </Section>
     );
 

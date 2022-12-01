@@ -92,6 +92,7 @@ position: relative;
 &:hover{
     transform: scale(0.9);
 }
+
 &::after{
     content:' ';
     position: absolute;
