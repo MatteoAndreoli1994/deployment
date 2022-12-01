@@ -38,6 +38,11 @@ background-image: url(${Gameboy});
 object-fit: cover;
 background-size: cover;
 
+@media (max-width: 60em){
+    width:70%;
+    padding-bottom:70%;
+  }
+
 `
 const BtnA= styled.button`
 width:2.5%;
@@ -49,17 +54,28 @@ margin-top: 24.4%;
 margin-left: 20.3%;
 border: none;
 background-color: rgba(0,0,0,0);
-transform: scale(1.5);
+transform: scale(1.8);
 background-size:100% 100%;
 background-image: url(${TastoA});
 object-fit: cover;
 background-size: cover;
 
 &:active{
-    transform: scale(2.5);
+    transform: scale(1.5);
 
 }
 
+@media (max-width: 60em){
+    margin-top: 43.7%;
+    margin-left: 36.4%;
+    transform: scale(3.2);
+
+    &:active{
+        
+        transform: scale(2.8);
+    }
+
+  }
 `
 
 const Title = styled.h2`
