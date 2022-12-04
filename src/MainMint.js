@@ -43,6 +43,19 @@ position: absolute;
 
 margin-top: 62vh;
 
+@media (max-width: 60em){
+    height:30vh;
+    margin-top: 72vh;
+  }
+  @media (max-width: 40em){
+    height:20vh;
+    margin-top: 82vh;
+  }
+  @media (max-width: 30em){
+    height:20vh;
+    margin-top: 82vh;
+
+  }
 `
 const TopContainer = styled.div`
 width:100vw;
@@ -52,7 +65,15 @@ display: flex;
 position: absolute;
 justify-content: right;
 
-
+@media (max-width: 60em){
+    height:27vh;
+  }
+  @media (max-width: 40em){
+    height:25vh;
+  }
+  @media (max-width: 30em){
+    height:20vh;
+  }
 `
 const Cloud = styled.div`
 width: 30vh;
@@ -63,6 +84,22 @@ background-color:red;
 background-size:100% 100%;
 
 margin-top: 3%;
+
+@media (max-width: 60em){
+    width: 27vh;
+    padding-bottom: 27vh;
+
+  }
+  @media (max-width: 40em){
+    width: 25vh;
+    padding-bottom: 25vh;
+
+  }
+  @media (max-width: 30em){
+    width: 20vh;
+    padding-bottom: 20vh;
+
+  }
 `
 
 const CactusImage = styled.div`
@@ -75,6 +112,21 @@ display: inline-flex;
 background-size:100% 100%;
 margin-left: 7%;
 
+@media (max-width: 60em){
+    width: 30vh;
+    padding-bottom: 30vh;
+
+  }
+  @media (max-width: 40em){
+    width: 20vh;
+    padding-bottom: 20vh;
+
+  }
+  @media (max-width: 30em){
+    width: 20vh;
+    padding-bottom: 20vh;
+
+  }
 
 `
 const MinterContainer= styled.div`
