@@ -144,9 +144,9 @@ background-image: url(${Gameboy});
 background-position:center;
 
 @media (max-width: 50em){
-    width:120%;
-    padding-bottom:120%;
-    background-size: 120%;
+    width:170%;
+    padding-bottom:170%;
+    background-size: 170%;
     
   }
 
@@ -305,12 +305,10 @@ const MainMint = ({ accounts, setAccounts }) => {
 
     return (
     <Section id="mint">
-        <TopContainer><Cloud></Cloud></TopContainer>
 
         <BotContainer>
             <CactusImage></CactusImage>
         </BotContainer>
-
         <Minting>
      
             <MinterContainer>
@@ -339,6 +337,11 @@ const MainMint = ({ accounts, setAccounts }) => {
 
 
         </Minting>
+
+        <TopContainer>
+            <Cloud></Cloud>
+        </TopContainer>
+
 
     </Section>
     );
