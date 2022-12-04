@@ -25,9 +25,9 @@ flex-direction: column;
 `
 const Minting = styled.div`
 width:100vw;
-height:65vh;
-margin-top: 20vh;
+height:100vh;
 
+overflow: hidden;
 align-items: center;
 justify-content: center;
 display: flex;
@@ -136,16 +136,16 @@ margin-left: 7%;
 
 `
 const MinterContainer= styled.div`
-width:45%;
-padding-bottom:45%;
+width:60%;
+padding-bottom:60%;
+
 background-size:100% 100%;
 background-image: url(${Gameboy});
-object-fit: cover;
-background-size: cover;
 
-@media (max-width: 60em){
-    width: 100%;
-    padding-bottom: 100%;
+
+@media (max-width: 50em){
+    width:90%;
+    padding-bottom:90%;
 
   }
 
