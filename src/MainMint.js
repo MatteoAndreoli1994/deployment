@@ -63,10 +63,7 @@ margin-right: 10%;
 margin-top: 3%;
 background-size:100% 100%;
 
-@media (max-width: 60em){
-    width:40%;
-    padding-bottom:40%;
-}
+
 `
 
 const CactusImage = styled.div`
@@ -79,11 +76,7 @@ margin-left: 3%;
 margin-bottom: -1.5%;
 background-size:100% 100%;
 
-@media (max-width: 60em){
-    margin-bottom: -4%;
-    width:100%;
-    padding-bottom:100%;
-}
+
 `
 const MinterContainer= styled.div`
 
@@ -95,10 +88,7 @@ background-image: url(${Gameboy});
 object-fit: cover;
 background-size: cover;
 
-@media (max-width: 60em){
-    width:100%;
-    padding-bottom:100%;
-}
+
 
 `
 const BtnA= styled.button`
@@ -122,17 +112,7 @@ background-size: cover;
 
 }
 
-@media (max-width: 60em){
-    margin-top: 43.7%;
-    margin-left: 36.4%;
-    transform: scale(3.2);
 
-    &:active{
-        
-        transform: scale(2.8);
-    }
-
-  }
 `
 
 const BtnSinistra= styled.button`
