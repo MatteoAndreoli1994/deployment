@@ -136,16 +136,16 @@ margin-left: 7%;
 
 `
 const MinterContainer= styled.div`
-width:60%;
-padding-bottom:60%;
+width:50%;
+padding-bottom:50%;
 
 background-size:100% 100%;
 background-image: url(${Gameboy});
 
 
 @media (max-width: 50em){
-    width:90%;
-    padding-bottom:90%;
+    width:100%;
+    padding-bottom:100%;
 
   }
 
