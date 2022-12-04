@@ -15,7 +15,6 @@ const GameBoyzColorClubTestFinalAddress = "0x745ADC1a54F162A3d91c6BBD86B281CA6a8
 const Section = styled.div`
 height: 100vh;
 width: 100vw;
-
 background-image: url(${SfondoMint});
 object-fit: cover;
 background-size: cover;
@@ -27,77 +26,60 @@ const Minting = styled.div`
 width:100vw;
 height:65vh;
 margin-top: 25vh;
-background-color:blue;
+
 align-items: center;
 justify-content: center;
 display: flex;
 position: absolute;
-
 `
 const BotContainer = styled.div`
 width:30vw;
 height:100vh;
-background-color:red;
 
 display: flex;
 position: absolute;
-align-items: end;
+align-items: center;
 `
 const TopContainer = styled.div`
 width:100vw;
 height:20vh;
 background-color:red;
-
 display: flex;
 position: absolute;
 align-items: center;
-
 justify-content: right;
 `
 const Cloud = styled.div`
 width: 16%;
 padding-bottom: 16%;
-
 background-image: url(${Nuvola});
 display: inline-flex;
-
 margin-right: 10%;
 margin-top: 3%;
 background-size:100% 100%;
-
-
 `
 
 const CactusImage = styled.div`
 width:40%;
 padding-bottom:40%;
-
-background-image: url(${Cactus});
+background-color:blue;
 display: inline-flex;
 margin-left: 3%;
 margin-bottom: -1.5%;
 background-size:100% 100%;
-
-
+background-image: url(${Cactus});
 `
 const MinterContainer= styled.div`
-
 width:40%;
 padding-bottom:40%;
-
 background-size:100% 100%;
 background-image: url(${Gameboy});
 object-fit: cover;
 background-size: cover;
-
-
-
 `
 const BtnA= styled.button`
 width:2.5%;
 padding-bottom:2.5%;
-
-
 position: absolute;
 margin-top: 24.4%;
 margin-left: 20.3%;
@@ -108,20 +90,14 @@ background-size:100% 100%;
 background-image: url(${TastoA});
 object-fit: cover;
 background-size: cover;
-
 &:active{
     transform: scale(1.5);
-
 }
-
-
 `
 
 const BtnSinistra= styled.button`
 width:2.5%;
 padding-bottom:2.5%;
-
-
 position: absolute;
 margin-top: 24.4%;
 margin-left: 12.3%;
@@ -132,18 +108,14 @@ background-size:100% 100%;
 background-image: url(${Sinistra});
 object-fit: cover;
 background-size: cover;
-
 &:active{
     background-image: none;
     
-
 }
 `
 const BtnDestra= styled.button`
 width:2.5%;
 padding-bottom:2.5%;
-
-
 position: absolute;
 margin-top: 24.1%;
 margin-left: 15.03%;
@@ -154,11 +126,9 @@ background-size:100% 100%;
 background-image: url(${Destra});
 object-fit: cover;
 background-size: cover;
-
 &:active{
     background-image: none;
     
-
 }
 `
 
@@ -175,7 +145,6 @@ margin-top: 1em;
 const SubTextContainer = styled.div`
 width:8.5%;
 padding-bottom:7%;
-
 position: absolute;
 display: inline-flex;
 margin-bottom:20vh;
@@ -183,20 +152,15 @@ margin-top: 11.8%;
 margin-left: 14%;
 transform: rotate(-4deg);
 justify-content: center;
-
 text-align: center;
 `
 
 const SubText = styled.p`
 font-size: ${props => props.theme.fonts};
-
-
 font-weight: 400;
-
 `
 const Warn = styled.p`
 font-size: ${props => props.theme.fontxs};
-
 justify-content: center;
 align-items: center;
 text-align: center;
@@ -208,7 +172,6 @@ padding:0;
 margin:0;
 width: 1em;
 margin: 1em;
-
 `
 const Display = styled.div`
 justify-content: center;
@@ -217,19 +180,14 @@ text-align: center;
 align-items:center;
 display:flex;
 flex-direction: column;
-
-
-
 input[type=number] {
     -moz-appearance: textfield;
   }
-
   input::-webkit-outer-spin-button,
   input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
   }
-
 `
 
 
