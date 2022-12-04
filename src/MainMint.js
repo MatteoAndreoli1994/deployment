@@ -21,21 +21,23 @@ object-fit: cover;
 background-size: cover;
 overflow: hidden;
 flex-direction: column;
+position: relative;
 `
 const Minting = styled.div`
 width:100vw;
 height:65vh;
 margin-top: 25vh;
-
+background-color:blue;
 align-items: center;
 justify-content: center;
 display: flex;
-position: relative;
+position: absolute;
 
 `
 const BotContainer = styled.div`
-width:40vw;
+width:30vw;
 height:100vh;
+background-color:red;
 
 display: flex;
 position: absolute;
@@ -44,7 +46,7 @@ align-items: end;
 const TopContainer = styled.div`
 width:100vw;
 height:20vh;
-
+background-color:red;
 
 display: flex;
 position: absolute;
