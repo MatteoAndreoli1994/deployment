@@ -15,12 +15,13 @@ const GameBoyzColorClubTestFinalAddress = "0x745ADC1a54F162A3d91c6BBD86B281CA6a8
 const Section = styled.div`
 height: 100vh;
 width: 100vw;
+background-color: red;
 background-image: url(${SfondoMint});
 object-fit: cover;
 background-size: cover;
 overflow: hidden;
 flex-direction: column;
-position: relative;
+
 `
 const Minting = styled.div`
 width:100vw;
@@ -33,41 +34,48 @@ display: flex;
 position: absolute;
 `
 const BotContainer = styled.div`
-width:30vw;
-height:100vh;
+width:100vw;
+height:40vh;
 
 display: flex;
 position: absolute;
-align-items: center;
+
+
+margin-top: 62vh;
+
 `
 const TopContainer = styled.div`
 width:100vw;
-height:20vh;
-background-color:red;
+height:30vh;
+
 display: flex;
 position: absolute;
-align-items: center;
 justify-content: right;
+
+
 `
 const Cloud = styled.div`
-width: 16%;
-padding-bottom: 16%;
+width: 30vh;
+padding-bottom: 30vh;
 background-image: url(${Nuvola});
 display: inline-flex;
-margin-right: 10%;
-margin-top: 3%;
+background-color:red;
 background-size:100% 100%;
+
+margin-top: 3%;
 `
 
 const CactusImage = styled.div`
-width:40%;
-padding-bottom:40%;
-background-color:blue;
-display: inline-flex;
-margin-left: 3%;
-margin-bottom: -1.5%;
-background-size:100% 100%;
+width: 40vh;
+padding-bottom: 40vh;
+background-color:red;
 background-image: url(${Cactus});
+display: inline-flex;
+
+background-size:100% 100%;
+margin-left: 7%;
+
+
 `
 const MinterContainer= styled.div`
 width:40%;
@@ -234,7 +242,7 @@ const MainMint = ({ accounts, setAccounts }) => {
         <TopContainer><Cloud></Cloud></TopContainer>
 
         <BotContainer>
-            <CactusImage src={Cactus} />
+            <CactusImage></CactusImage>
         </BotContainer>
 
         <Minting>
