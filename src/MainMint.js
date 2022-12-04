@@ -26,12 +26,24 @@ flex-direction: column;
 const Minting = styled.div`
 width:100vw;
 height:65vh;
-margin-top: 25vh;
+margin-top: 20vh;
 
 align-items: center;
 justify-content: center;
 display: flex;
 position: absolute;
+
+background-color:blue;
+
+@media (max-width: 60em){
+    height:65vh;
+  }
+  @media (max-width: 40em){
+    height:63vh;
+  }
+  @media (max-width: 30em){
+    height:63vh;
+  }
 `
 const BotContainer = styled.div`
 width:100vw;
@@ -132,12 +144,28 @@ margin-left: 7%;
 
 `
 const MinterContainer= styled.div`
-width:40%;
-padding-bottom:40%;
+width:65vh;
+padding-bottom:65vh;
 background-size:100% 100%;
 background-image: url(${Gameboy});
 object-fit: cover;
 background-size: cover;
+
+@media (max-width: 60em){
+    width: 65vh;
+    padding-bottom: 65vh;
+
+  }
+  @media (max-width: 40em){
+    width: 60vh;
+    padding-bottom: 63vh;
+
+  }
+  @media (max-width: 30em){
+    width: 60vh;
+    padding-bottom: 63vh;
+
+  }
 `
 const BtnA= styled.button`
 width:2.5%;
@@ -228,10 +256,10 @@ align-items: center;
 text-align: center;
 `
 const MintAmount = styled.input`
-background:none;
-border:0;
-padding:0;
-margin:0;
+background: none;
+border: 0;
+padding: 0;
+margin: 0;
 width: 1em;
 margin: 1em;
 `
@@ -239,8 +267,8 @@ const Display = styled.div`
 justify-content: center;
 align-items: center;
 text-align: center;
-align-items:center;
-display:flex;
+align-items: center;
+display: flex;
 flex-direction: column;
 input[type=number] {
     -moz-appearance: textfield;
