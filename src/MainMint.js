@@ -63,7 +63,7 @@ height:30vh;
 
 display: flex;
 position: absolute;
-justify-content: right;
+justify-content: center;
 
 @media (max-width: 60em){
     height:27vh;
@@ -80,7 +80,7 @@ width: 30vh;
 padding-bottom: 30vh;
 background-image: url(${Nuvola});
 display: inline-flex;
-background-color:red;
+
 background-size:100% 100%;
 
 margin-top: 3%;
