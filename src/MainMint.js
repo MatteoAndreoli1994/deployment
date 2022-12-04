@@ -4,6 +4,7 @@ import GameBoyzColorClubTestFinal from './GameBoyzColorClubTestFinal.json';
 import styled from "styled-components";
 import SfondoMint from "./assets/background/sfondo_gradient.png"
 import Gameboy from "./assets/elements/minter.png"
+import GameboyMobile from "./assets/elements/minter_mobile.png"
 import TastoA from "./assets/elements/tastoA.png"
 import Sinistra from "./assets/elements/sinistra.png"
 import Destra from "./assets/elements/destra.png"
@@ -144,10 +145,10 @@ background-image: url(${Gameboy});
 background-position:center;
 
 @media (max-width: 50em){
-    width:170%;
-    padding-bottom:170%;
-    background-size: 170%;
-    
+    width:130%;
+    padding-bottom:130%;
+    background-size: 130%;
+    background-image: url(${GameboyMobile});
   }
 
 `
@@ -306,9 +307,7 @@ const MainMint = ({ accounts, setAccounts }) => {
     return (
     <Section id="mint">
 
-        <BotContainer>
-            <CactusImage></CactusImage>
-        </BotContainer>
+
         <Minting>
      
             <MinterContainer>
@@ -338,10 +337,13 @@ const MainMint = ({ accounts, setAccounts }) => {
 
         </Minting>
 
+
+        <BotContainer>
+            <CactusImage></CactusImage>
+        </BotContainer>
         <TopContainer>
             <Cloud></Cloud>
         </TopContainer>
-
 
     </Section>
     );
