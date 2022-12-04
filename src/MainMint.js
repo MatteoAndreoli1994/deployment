@@ -33,17 +33,9 @@ justify-content: center;
 display: flex;
 position: absolute;
 
-background-color:blue;
 
-@media (max-width: 60em){
-    height:65vh;
-  }
-  @media (max-width: 40em){
-    height:63vh;
-  }
-  @media (max-width: 30em){
-    height:63vh;
-  }
+
+
 `
 const BotContainer = styled.div`
 width:100vw;
@@ -144,28 +136,19 @@ margin-left: 7%;
 
 `
 const MinterContainer= styled.div`
-width:65vh;
-padding-bottom:65vh;
+width:45%;
+padding-bottom:45%;
 background-size:100% 100%;
 background-image: url(${Gameboy});
 object-fit: cover;
 background-size: cover;
 
 @media (max-width: 60em){
-    width: 65vh;
-    padding-bottom: 65vh;
+    width: 100%;
+    padding-bottom: 100%;
 
   }
-  @media (max-width: 40em){
-    width: 60vh;
-    padding-bottom: 63vh;
 
-  }
-  @media (max-width: 30em){
-    width: 60vh;
-    padding-bottom: 63vh;
-
-  }
 `
 const BtnA= styled.button`
 width:2.5%;
