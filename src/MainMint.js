@@ -63,7 +63,7 @@ height:30vh;
 
 display: flex;
 position: absolute;
-justify-content: center;
+justify-content: end;
 
 @media (max-width: 60em){
     height:27vh;
