@@ -7,11 +7,13 @@ import img3 from "../../assets/nfts/Brasi.jpg"
 const Section = styled.section`
 
 width:100vw;
-min-height:100vh;
+height:100vh;
 
-background-color: ${props => props.theme.body};
+background-color: #83B270;
 position: relative;
 overflow: hidden;
+display: flex;
+flex-direction: column;
 `
 
 const Title = styled.h1`
@@ -25,22 +27,23 @@ align-items: center;
 margin: 1rem auto;
 ` 
 const Container = styled.div`
-width:50%;
+width:100vw;
+height: 100vh;
 
+position: absolute;
 
-margin: 2rem auto; 
 
 display: flex;
-justify-content: space-between;
+justify-content: center;
 align-items: center;
-flex-wrap: wrap;
+
 `
 const Item =styled.div`
 width: calc(25rem - 8vw);
-padding: 1rem 0;
+padding: 1em;
 color: Black;
 background-color: white;
-margin: 2rem 1rem;
+margin: 3%;
 position: relative;
 
 border: 4px solid black;

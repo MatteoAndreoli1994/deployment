@@ -5,21 +5,26 @@ import styled from "styled-components";
 import SfondoMint from "./assets/background/sfondo_gradient.png"
 import Gameboy from "./assets/elements/minter.png"
 import TastoA from "./assets/elements/tastoA.png"
+import Sinistra from "./assets/elements/sinistra.png"
+import Destra from "./assets/elements/destra.png"
+import Cactus from "./assets/elements/CACTUS.png"
+import Nuvola from "./assets/elements/nuvola.png"
 
 const GameBoyzColorClubTestFinalAddress = "0x745ADC1a54F162A3d91c6BBD86B281CA6a8aFf2d"
 
 const Section = styled.div`
-min-height: 100vh;
+height: 100vh;
 width: 100vw;
 
 background-image: url(${SfondoMint});
 object-fit: cover;
 background-size: cover;
 overflow: hidden;
+flex-direction: column;
 `
 const Minting = styled.div`
 width:100vw;
-height:50vh;
+height:65vh;
 margin-top: 25vh;
 
 align-items: center;
@@ -27,6 +32,58 @@ justify-content: center;
 display: flex;
 position: relative;
 
+`
+const BotContainer = styled.div`
+width:40vw;
+height:100vh;
+
+display: flex;
+position: absolute;
+align-items: end;
+`
+const TopContainer = styled.div`
+width:100vw;
+height:20vh;
+
+
+display: flex;
+position: absolute;
+align-items: center;
+
+justify-content: right;
+`
+const Cloud = styled.div`
+width: 16%;
+padding-bottom: 16%;
+
+background-image: url(${Nuvola});
+display: inline-flex;
+
+margin-right: 10%;
+margin-top: 3%;
+background-size:100% 100%;
+
+@media (max-width: 60em){
+    width:40%;
+    padding-bottom:40%;
+}
+`
+
+const CactusImage = styled.div`
+width:40%;
+padding-bottom:40%;
+
+background-image: url(${Cactus});
+display: inline-flex;
+margin-left: 3%;
+margin-bottom: -1.5%;
+background-size:100% 100%;
+
+@media (max-width: 60em){
+    margin-bottom: -4%;
+    width:100%;
+    padding-bottom:100%;
+}
 `
 const MinterContainer= styled.div`
 
@@ -39,9 +96,9 @@ object-fit: cover;
 background-size: cover;
 
 @media (max-width: 60em){
-    width:70%;
-    padding-bottom:70%;
-  }
+    width:100%;
+    padding-bottom:100%;
+}
 
 `
 const BtnA= styled.button`
@@ -78,19 +135,71 @@ background-size: cover;
   }
 `
 
+const BtnSinistra= styled.button`
+width:2.5%;
+padding-bottom:2.5%;
+
+
+position: absolute;
+margin-top: 24.4%;
+margin-left: 12.3%;
+border: none;
+background-color: rgba(0,0,0,0);
+transform: scale(1.8);
+background-size:100% 100%;
+background-image: url(${Sinistra});
+object-fit: cover;
+background-size: cover;
+
+&:active{
+    background-image: none;
+    
+
+}
+`
+const BtnDestra= styled.button`
+width:2.5%;
+padding-bottom:2.5%;
+
+
+position: absolute;
+margin-top: 24.1%;
+margin-left: 15.03%;
+border: none;
+background-color: rgba(0,0,0,0);
+transform: scale(1.8);
+background-size:100% 100%;
+background-image: url(${Destra});
+object-fit: cover;
+background-size: cover;
+
+&:active{
+    background-image: none;
+    
+
+}
+`
+
 const Title = styled.h2`
 font-size: ${props => props.theme.fontxxl};
 text-transform: capitalize;
 `
 const SubTextLight = styled.section`
-font-size: ${props => props.theme.fontmd};
+font-size: ${props => props.theme.fontxs};
 color: ${props => `rgba(${props.theme.bodyRgba},0.6)`};;
 font-weight: 400;
+margin-top: 1em;
 `
 const SubTextContainer = styled.div`
+width:8.5%;
+padding-bottom:7%;
 
-background-color:red;
+position: absolute;
+display: inline-flex;
 margin-bottom:20vh;
+margin-top: 11.8%;
+margin-left: 14%;
+transform: rotate(-4deg);
 justify-content: center;
 
 text-align: center;
@@ -104,17 +213,51 @@ font-weight: 400;
 
 `
 const Warn = styled.p`
-font-size: ${props => props.theme.fonts};
+font-size: ${props => props.theme.fontxs};
 
 justify-content: center;
 align-items: center;
 text-align: center;
+`
+const MintAmount = styled.input`
+background:none;
+border:0;
+padding:0;
+margin:0;
+width: 1em;
+margin: 1em;
+
+`
+const Display = styled.div`
+justify-content: center;
+align-items: center;
+text-align: center;
+align-items:center;
+display:flex;
+flex-direction: column;
+
+
+
+input[type=number] {
+    -moz-appearance: textfield;
+  }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
 `
 
 
 const MainMint = ({ accounts, setAccounts }) => {
     const [mintAmount, setMintAmount] = useState(1);
     const isConnected = Boolean(accounts[0]);
+
+
+
+    
 
     async function handleMint(){
         if(window.ethereum){
@@ -148,9 +291,35 @@ const MainMint = ({ accounts, setAccounts }) => {
 
     return (
     <Section id="mint">
+        <TopContainer><Cloud></Cloud></TopContainer>
+
+        <BotContainer>
+            <CactusImage src={Cactus} />
+        </BotContainer>
+
         <Minting>
             <MinterContainer>
-                <BtnA></BtnA>
+            <SubTextContainer> 
+                <SubText>
+                    
+                    {isConnected ? (
+                        <Display>
+                                <SubTextLight>Press A to MINT</SubTextLight>
+                                <MintAmount type="number" value={mintAmount}/>
+                        </Display>
+                    ) : (
+                    <Warn> You Must be Connect to Mint</Warn>,
+                    <SubTextLight>Collection of 2000 unique digital collectibles</SubTextLight>
+                    )}
+                </SubText>
+
+
+            </SubTextContainer>
+                <BtnA onClick={handleMint}></BtnA>
+                
+
+                <BtnSinistra onClick={handleDecrement}></BtnSinistra>
+                <BtnDestra onClick={handleIncrement}></BtnDestra>
             </MinterContainer>
 
 
