@@ -141,12 +141,13 @@ padding-bottom:50%;
 
 background-size:100% 100%;
 background-image: url(${Gameboy});
-
+background-position:center;
 
 @media (max-width: 50em){
-    width:100%;
-    padding-bottom:100%;
-
+    width:120%;
+    padding-bottom:120%;
+    background-size: 120%;
+    
   }
 
 `
@@ -311,6 +312,7 @@ const MainMint = ({ accounts, setAccounts }) => {
         </BotContainer>
 
         <Minting>
+     
             <MinterContainer>
             <SubTextContainer> 
                 <SubText>
