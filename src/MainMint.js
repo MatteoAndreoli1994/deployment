@@ -63,7 +63,8 @@ height:30vh;
 
 display: flex;
 position: absolute;
-justify-content: end;
+justify-content: center;
+
 
 @media (max-width: 60em){
     height:27vh;
@@ -78,12 +79,13 @@ justify-content: end;
 const Cloud = styled.div`
 width: 30vh;
 padding-bottom: 30vh;
+
 background-image: url(${Nuvola});
 display: inline-flex;
 
 background-size:100% 100%;
 
-margin-top: 3%;
+margin-left: 70%;
 
 @media (max-width: 60em){
     width: 27vh;
@@ -105,7 +107,7 @@ margin-top: 3%;
 const CactusImage = styled.div`
 width: 40vh;
 padding-bottom: 40vh;
-background-color:red;
+
 background-image: url(${Cactus});
 display: inline-flex;
 
