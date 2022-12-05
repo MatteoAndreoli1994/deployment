@@ -10,6 +10,8 @@ import Sinistra from "./assets/elements/sinistra.png"
 import Destra from "./assets/elements/destra.png"
 import Cactus from "./assets/elements/CACTUS.png"
 import Nuvola from "./assets/elements/nuvola.png"
+import Sinistra_mobile from "./assets/elements/sinistra_mobile.png"
+import Destra_mobile from "./assets/elements/destra_mobile.png"
 
 const GameBoyzColorClubTestFinalAddress = "0x745ADC1a54F162A3d91c6BBD86B281CA6a8aFf2d"
 
@@ -153,11 +155,11 @@ background-position:center;
 
 `
 const BtnA= styled.button`
-width:2.5%;
-padding-bottom:2.5%;
+width:3.5%;
+padding-bottom:3.5%;
 position: absolute;
-margin-top: 24.4%;
-margin-left: 20.3%;
+margin-top: 28.1%;
+margin-left: 28%;
 border: none;
 background-color: rgba(0,0,0,0);
 transform: scale(1.8);
@@ -166,17 +168,19 @@ background-image: url(${TastoA});
 object-fit: cover;
 background-size: cover;
 &:active{
-    transform: scale(1.5);
+    transform: scale(1.6);
 }
+
 `
 
 const BtnSinistra= styled.button`
-width:2.5%;
-padding-bottom:2.5%;
+width:1.9%;
+padding-bottom:1.9%;
 position: absolute;
-margin-top: 24.4%;
-margin-left: 12.3%;
+margin-top: 31.5%;
+margin-left: 14.35%;
 border: none;
+
 background-color: rgba(0,0,0,0);
 transform: scale(1.8);
 background-size:100% 100%;
@@ -187,13 +191,21 @@ background-size: cover;
     background-image: none;
     
 }
+
+@media (max-width: 50em){
+background-image: url(${Sinistra_mobile});
+width:8%;
+padding-bottom:8%;
+margin-top: 91.5%;
+margin-left: 14.05%;
+}
 `
 const BtnDestra= styled.button`
-width:2.5%;
-padding-bottom:2.5%;
+width:1.7%;
+padding-bottom:1.7%;
 position: absolute;
-margin-top: 24.1%;
-margin-left: 15.03%;
+margin-top: 30.9%;
+margin-left: 18.09%;
 border: none;
 background-color: rgba(0,0,0,0);
 transform: scale(1.8);
@@ -204,6 +216,10 @@ background-size: cover;
 &:active{
     background-image: none;
     
+}
+@media (max-width: 50em){
+
+  background-image: url(${Destra_mobile});
 }
 `
 
@@ -223,8 +239,8 @@ padding-bottom:7%;
 position: absolute;
 display: inline-flex;
 margin-bottom:20vh;
-margin-top: 11.8%;
-margin-left: 14%;
+margin-top: 1.8%;
+margin-left: 18%;
 transform: rotate(-4deg);
 justify-content: center;
 text-align: center;
@@ -307,7 +323,9 @@ const MainMint = ({ accounts, setAccounts }) => {
     return (
     <Section id="mint">
 
-
+        <BotContainer>
+            <CactusImage></CactusImage>
+        </BotContainer>
         <Minting>
      
             <MinterContainer>
@@ -338,9 +356,7 @@ const MainMint = ({ accounts, setAccounts }) => {
         </Minting>
 
 
-        <BotContainer>
-            <CactusImage></CactusImage>
-        </BotContainer>
+
         <TopContainer>
             <Cloud></Cloud>
         </TopContainer>
