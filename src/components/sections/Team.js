@@ -53,14 +53,10 @@ border: 4px solid black;
 border-radius: 20px;
 
 
-&:hover{
-  img{
-    transform: translateY(-2rem) scale(1.2);
-  }
-}
+
 @media (max-width: 50em){
-  width: 5em;
-  height: 9em;
+  width: 35vw;
+  height: 35vh;
 
   }
 `
@@ -73,7 +69,11 @@ border-radius: 20px;
 cursor: pointer;
 background-color: #1F1F1F;
 display:flex;
-
+&:hover{
+  img{
+    transform: translateY(-2rem) scale(1.2);
+  }
+}
 
 img{
   width: 100%;
@@ -82,7 +82,8 @@ img{
   transition: all 0.3s ease;
 }
 @media (max-width: 50em){
-  width: 5em;
+  width: 35vw;
+  
 
 
   }
