@@ -178,7 +178,7 @@ width:1.9%;
 padding-bottom:1.9%;
 position: absolute;
 margin-top: 31.5%;
-margin-left: 14.35%;
+margin-left: 14.22%;
 border: none;
 
 background-color: rgba(0,0,0,0);
