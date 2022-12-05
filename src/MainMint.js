@@ -184,7 +184,7 @@ width:1.9%;
 padding-bottom:1.9%;
 position: absolute;
 margin-top: 31.5%;
-margin-left: 14.22%;
+margin-left: 14.32%;
 border: none;
 
 background-color: rgba(0,0,0,0);
@@ -245,21 +245,22 @@ margin-top: 1em;
 
 `
 const SubTextContainer = styled.div`
-width:8.5%;
-padding-bottom:7%;
+width:10%;
+height:14%;
 position: absolute;
 display: inline-flex;
 margin-bottom:20vh;
-margin-top: 1.8%;
-margin-left: 18%;
+margin-top: 13%;
+margin-left: 17%;
 transform: rotate(-4deg);
 justify-content: center;
 text-align: center;
 
+
 @media (max-width: 50em){
   transform: rotate(0deg);
-  width:40.5%;
-  padding-bottom:20.5%;
+  width:42%;
+  height:18.5%;
   margin-top: 23%;
   margin-left: 27.46%;
 
