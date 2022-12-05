@@ -184,9 +184,8 @@ width:1.9%;
 padding-bottom:1.9%;
 position: absolute;
 margin-top: 31.5%;
-margin-left: 14.32%;
+margin-left: 14.37%;
 border: none;
-
 background-color: rgba(0,0,0,0);
 transform: scale(1.8);
 background-size:100% 100%;
@@ -197,7 +196,6 @@ background-size: cover;
     background-image: none;
     
 }
-
 @media (max-width: 50em){
 background-image: url(${Sinistra_mobile});
 width:8%;
