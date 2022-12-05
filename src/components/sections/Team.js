@@ -14,6 +14,7 @@ position: relative;
 overflow: hidden;
 display: flex;
 flex-direction: column;
+
 `
 
 const Title = styled.h1`
@@ -27,8 +28,8 @@ align-items: center;
 margin: 1rem auto;
 ` 
 const Container = styled.div`
-width:100vw;
-height: 100vh;
+width: 100vw;
+height: 60vh;
 
 position: absolute;
 
@@ -36,14 +37,16 @@ position: absolute;
 display: flex;
 justify-content: center;
 align-items: center;
+margin-top: 20vh;
 
 `
 const Item =styled.div`
-width: calc(25rem - 8vw);
+width: 10em;
+height: 18em;
 padding: 1em;
 color: Black;
 background-color: white;
-margin: 3%;
+margin: 1%;
 position: relative;
 
 border: 4px solid black;
@@ -55,11 +58,15 @@ border-radius: 20px;
     transform: translateY(-2rem) scale(1.2);
   }
 }
+@media (max-width: 50em){
+  width: 5em;
+  height: 9em;
 
+  }
 `
 const ImageContainer =styled.div`
-width: 15rem;
-hight: 15rem;
+width:10em;
+
 margin: 0 auto;
 border: 3px solid Black;
 border-radius: 20px;
@@ -67,12 +74,18 @@ cursor: pointer;
 background-color: #1F1F1F;
 display:flex;
 
+
 img{
   width: 100%;
   height: 100%;
   border-radius: 18px;
   transition: all 0.3s ease;
 }
+@media (max-width: 50em){
+  width: 5em;
+
+
+  }
 `
 const Name = styled.h2`
 font-size: ${props => props.theme.fontlg}
@@ -83,6 +96,7 @@ text-transform: uppercase;
 color: black;
 margin-top: 1rem;
 text-align: center;
+
 `
 const Position = styled.h2`
 font-size: 21px;
@@ -95,6 +109,8 @@ color: white;
 margin-top: 1rem;
 font-weight: 400;
 color: ${props => `rgba(${props.theme.textRgba2},0.6)`}
+
+
 `
 
 const MemberComponent = ({img, name="", position=""}) => {
@@ -108,6 +124,7 @@ const MemberComponent = ({img, name="", position=""}) => {
       <Position>{position}</Position>
     </Item>
   )
+
 }
 
 const Team = () => {
@@ -116,7 +133,7 @@ const Team = () => {
       <Title> Team</Title>
       <Container>
           <MemberComponent img={img1} name="Matteo" position="Code Developer"/>
-          <MemberComponent img={img2} name="Velvetsofa" position="Brush"/>
+          <MemberComponent img={img2} name="Velvetsofa" position="Code Developer"/>
       </Container>
       
     </Section>
