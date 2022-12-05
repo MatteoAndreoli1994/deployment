@@ -170,7 +170,13 @@ background-size: cover;
 &:active{
     transform: scale(1.6);
 }
-
+@media (max-width: 50em){
+  background-image: url(${TastoA});
+  width:14%;
+  padding-bottom:14%;
+  margin-top: 82.55%;
+  margin-left: 69.46%;
+  }
 `
 
 const BtnSinistra= styled.button`
@@ -218,9 +224,12 @@ background-size: cover;
     
 }
 @media (max-width: 50em){
-
   background-image: url(${Destra_mobile});
-}
+  width:7.5%;
+  padding-bottom:7.5%;
+  margin-top: 90.35%;
+  margin-left: 29.46%;
+  }
 `
 
 const Title = styled.h2`
@@ -232,6 +241,8 @@ font-size: ${props => props.theme.fontxs};
 color: ${props => `rgba(${props.theme.bodyRgba},0.6)`};;
 font-weight: 400;
 margin-top: 1em;
+
+
 `
 const SubTextContainer = styled.div`
 width:8.5%;
@@ -244,6 +255,15 @@ margin-left: 18%;
 transform: rotate(-4deg);
 justify-content: center;
 text-align: center;
+
+@media (max-width: 50em){
+  transform: rotate(0deg);
+  width:40.5%;
+  padding-bottom:20.5%;
+  margin-top: 23%;
+  margin-left: 27.46%;
+
+  }
 `
 
 const SubText = styled.p`
