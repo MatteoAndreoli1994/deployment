@@ -201,7 +201,7 @@ background-image: url(${Sinistra_mobile});
 width:8%;
 padding-bottom:8%;
 margin-top: 91.5%;
-margin-left: 14.0%;
+margin-left: 13.95%;
 }
 `
 const BtnDestra= styled.button`
