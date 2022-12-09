@@ -240,7 +240,7 @@ const Navigation = () => {
           <MenuItem onClick={()=> scrollTo('roadmap')}>RoadMap</MenuItem>
           <MenuItem onClick={()=> scrollTo('mint')}>Mint</MenuItem>
           <MenuItem onClick={()=> scrollTo('team')}>Team</MenuItem>
-          <MenuItem onClick={()=> scrollTo('faq')}>Faq</MenuItem>
+          <MenuItem onClick={()=> scrollTo('faqq')}>Faq</MenuItem>
           
 
         </Menu>
