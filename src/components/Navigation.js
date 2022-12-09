@@ -6,6 +6,9 @@ import Button from "./Button"
 import Twitter from "../assets/social-media-icons/twitter.png"
 import Telegram from "../assets/social-media-icons/Telegram.png"
 
+import { ConnectButton } from '@rainbow-me/rainbowkit';
+import {useAccount} from 'wagmi';
+
 const Section = styled.section`
 width: 100vw;
 background-color: ${props => props.theme.body};
@@ -197,8 +200,8 @@ display: none;
 }
 `
  
-const Navigation = ({ accounts, setAccounts }) => {
-  const isConnected = Boolean(accounts[0]);
+const Navigation = () => { 
+  const {isConnected} = useAccount();
 
   const [click, setClick] = useState(false);
 
@@ -214,14 +217,8 @@ const Navigation = ({ accounts, setAccounts }) => {
     setClick(!click);
   }
 
-  async function connectAccount(){
-      if (window.ethereum){
-          const accounts = await window.ethereum.request({
-              method: "eth_requestAccounts", 
-          });
-          setAccounts(accounts);
-      }
-  }
+
+
 
   
   return (
@@ -247,11 +244,9 @@ const Navigation = ({ accounts, setAccounts }) => {
           
 
         </Menu>
-        {isConnected ?(
-                <ResultConnection>Connected</ResultConnection>
-            ) : (
-              <Btn onClick={connectAccount}>Connect Wallet</Btn>
-            )}
+
+        <ConnectButton />
+        
 
       </Navbar>
 

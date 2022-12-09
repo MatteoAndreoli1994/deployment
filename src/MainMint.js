@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ethers, BigNumber} from 'ethers';
 import GameBoyzColorClubTestFinal from './GameBoyzColorClubTestFinal.json';
 import styled from "styled-components";
@@ -12,8 +12,12 @@ import Cactus from "./assets/elements/CACTUS.png"
 import Nuvola from "./assets/elements/nuvola.png"
 import Sinistra_mobile from "./assets/elements/sinistra_mobile.png"
 import Destra_mobile from "./assets/elements/destra_mobile.png"
+import { useContractRead } from 'wagmi'
 
-const GameBoyzColorClubTestFinalAddress = "0x745ADC1a54F162A3d91c6BBD86B281CA6a8aFf2d"
+import {useAccount,  usePrepareContractWrite, useContractWrite } from 'wagmi';
+
+
+const GameBoyzColorClubTestFinalAddress = "0xfB03f8cf7c8C3A59937D183eEc9f15d81C877a72"
 
 const Section = styled.div`
 height: 100vh;
@@ -270,10 +274,11 @@ font-size: ${props => props.theme.fonts};
 font-weight: 400;
 `
 const Warn = styled.p`
-font-size: ${props => props.theme.fontxs};
+font-size: ${props => props.theme.fonts};
 justify-content: center;
 align-items: center;
 text-align: center;
+
 `
 const MintAmount = styled.input`
 background: none;
@@ -301,13 +306,47 @@ input[type=number] {
 `
 
 
-const MainMint = ({ accounts, setAccounts }) => {
+const MainMint = () => {
     const [mintAmount, setMintAmount] = useState(1);
-    const isConnected = Boolean(accounts[0]);
+    const {isConnected} = useAccount();
+    const [supplyData, setSupplyData] = useState(0);
+    const [allowListData, setAllowListData] = useState(0);
+    const { address } = useAccount();
+    const [Wl, setWl] = useState(1);
 
 
+      const { data: totalSupplyData} = useContractRead({
+        address: '0xfB03f8cf7c8C3A59937D183eEc9f15d81C877a72',
+        abi: GameBoyzColorClubTestFinal.abi,
+        functionName: "totalSupply",
+        watch: true,
+      });
 
-    
+      useEffect(() => {
+        if (totalSupplyData) {
+          let temp = totalSupplyData / (1);
+          setSupplyData(temp);
+        }
+      }, [totalSupplyData]);
+
+      
+
+      const { data: allowListMintCounterData} = useContractRead({
+        address: '0xfB03f8cf7c8C3A59937D183eEc9f15d81C877a72',
+        abi: GameBoyzColorClubTestFinal.abi,
+        functionName: "allowListMintCounter",
+        watch: true,
+        args: [address],
+      });
+
+      useEffect(() => {
+        if (allowListMintCounterData) {
+          let temp2 = allowListMintCounterData / (1);
+          setAllowListData(temp2);
+        }
+      }, [allowListMintCounterData]);
+
+
 
     async function handleMint(){
         if(window.ethereum){
@@ -335,34 +374,44 @@ const MainMint = ({ accounts, setAccounts }) => {
     };
 
     const handleIncrement = () => {
-        if(mintAmount >= 3 ) return;
+        if(mintAmount >= allowListData ) return;
         setMintAmount(mintAmount + 1);
     };
 
+
+
     return (
     <Section id="mint">
+
 
         <BotContainer>
             <CactusImage></CactusImage>
         </BotContainer>
         <Minting>
-     
             <MinterContainer>
             <SubTextContainer> 
                 <SubText>
-                    
-                    {isConnected ? (
+                {isConnected && allowListData? (
+                  
                         <Display>
-                                <SubTextLight>Press A to MINT</SubTextLight>
+                                <SubTextLight>MINT {Wl}</SubTextLight>
+                                <SubTextLight>Chose how many nft you want to mint using the arrows. Press A to mint.</SubTextLight>
                                 <MintAmount type="number" value={mintAmount}/>
                         </Display>
-                    ) : (
-                    <Warn> You Must be Connect to Mint</Warn>,
-                    <SubTextLight>Collection of 2000 unique digital collectibles</SubTextLight>
-                    )}
+                      
+                    ) : isConnected? (
+                    <>
+                      <Warn> Wl Finite</Warn>
+                      
+
+                    </>
+                    ):
+                    (<SubTextLight>You Must be Connect to Mint</SubTextLight>)
+                    
+                    }
+
                 </SubText>
-
-
+                
             </SubTextContainer>
                 <BtnA onClick={handleMint}></BtnA>
                 
@@ -370,14 +419,21 @@ const MainMint = ({ accounts, setAccounts }) => {
                 <BtnSinistra onClick={handleDecrement}></BtnSinistra>
                 <BtnDestra onClick={handleIncrement}></BtnDestra>
             </MinterContainer>
-
+                
 
         </Minting>
 
 
 
         <TopContainer>
-            <Cloud></Cloud>
+            <Cloud>
+              <Warn>balance:</Warn>
+              <p>{allowListData}</p>       
+            </Cloud>
+
+            <Warn>Total Supply:</Warn>
+            <p>{supplyData} /2222</p>
+
         </TopContainer>
 
     </Section>
