@@ -113,7 +113,7 @@ function App() {
           <MainMint accounts= {accounts} setAccounts={setAccounts} />
           <Team />
           <Faq />
-                  
+          <Footer />                    
 
 
         </ThemeProvider>
