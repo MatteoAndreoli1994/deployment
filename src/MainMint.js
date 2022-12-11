@@ -78,9 +78,9 @@ display: -ms-flexbox;
 
 display: flex;
 position: absolute;
--webkit-box-pack: right;
--ms-flex-pack: right;
-        justify-content: right;
+-webkit-justify-content: flex-end;
+align-items: flex-end;
+-webkit-align-items: flex-end;
 
 
 @media (max-width: 60em){
