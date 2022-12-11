@@ -407,7 +407,7 @@ const MainMint = () => {
                       
                     ) : isConnected? (
                     <>
-                      <Warn> Wl Finite</Warn>
+                      <Warn> You have no Whitelist available!</Warn>
                       
 
                     </>
