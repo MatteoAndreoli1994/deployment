@@ -74,7 +74,7 @@ height:30vh;
 
 display: flex;
 position: absolute;
-justify-content: center;
+justify-content: right;
 
 
 @media (max-width: 60em){
@@ -90,13 +90,13 @@ justify-content: center;
 const Cloud = styled.div`
 width: 30vh;
 padding-bottom: 30vh;
-
+display: flex;
 background-image: url(${Nuvola});
 display: inline-flex;
 
 background-size:100% 100%;
 
-margin-left: 70%;
+
 
 @media (max-width: 60em){
     width: 27vh;
@@ -427,12 +427,10 @@ const MainMint = () => {
 
         <TopContainer>
             <Cloud>
-              <Warn>balance:</Warn>
-              <p>{allowListData}</p>       
+     
             </Cloud>
 
-            <Warn>Total Supply:</Warn>
-            <p>{supplyData} /2222</p>
+
 
         </TopContainer>
 

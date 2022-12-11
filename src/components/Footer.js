@@ -13,6 +13,7 @@ outline: none;
 border: none;
 height:60px;
 width:60px;
+margin: 0.5rem;
 border-radius: 50%;
 cursor: pointer;
 transition: all 0.2s ease;
@@ -58,7 +59,7 @@ margin-top: 1.5em;
 width: 80%;
 display:flex;
 align-item: center;
-justify-content: space-between;
+justify-content: center;
 margin: 2rem auto;
 width: 10%;
 
@@ -78,7 +79,7 @@ width: 100%;
 height:100%;
 
 display: flex;
-
+justify-content: center;
 align-items:center;
 
 `
