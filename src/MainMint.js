@@ -8,7 +8,7 @@ import GameboyMobile from "./assets/elements/minter_mobile.png"
 import TastoA from "./assets/elements/tastoA.png"
 import Sinistra from "./assets/elements/sinistra.png"
 import Destra from "./assets/elements/destra.png"
-
+import Cactus from "./assets/elements/CACTUS.png"
 import Nuvola from "./assets/elements/nuvola.png"
 import Sinistra_mobile from "./assets/elements/sinistra_mobile.png"
 import Destra_mobile from "./assets/elements/destra_mobile.png"
@@ -115,6 +115,33 @@ margin-left: 70%;
   }
 `
 
+const CactusImage = styled.div`
+width: 40vh;
+padding-bottom: 40vh;
+
+background-image: url(${Cactus});
+display: inline-flex;
+
+background-size:100% 100%;
+margin-left: 7%;
+
+@media (max-width: 60em){
+    width: 30vh;
+    padding-bottom: 30vh;
+
+  }
+  @media (max-width: 40em){
+    width: 20vh;
+    padding-bottom: 20vh;
+
+  }
+  @media (max-width: 30em){
+    width: 20vh;
+    padding-bottom: 20vh;
+
+  }
+
+`
 const MinterContainer= styled.div`
 width:50%;
 padding-bottom:50%;
@@ -358,7 +385,7 @@ const MainMint = () => {
 
 
         <BotContainer>
-
+            <CactusImage></CactusImage>
         </BotContainer>
         <Minting>
             <MinterContainer>
