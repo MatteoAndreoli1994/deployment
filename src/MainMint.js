@@ -396,6 +396,7 @@ const MainMint = () => {
         <Minting>
             <MinterContainer>
             <SubTextContainer> 
+            {allowListData}
                 <SubText>
                 {isConnected && allowListData? (
                   
@@ -407,9 +408,7 @@ const MainMint = () => {
                       
                     ) : isConnected? (
                     <>
-                      <Warn> You have no Whitelist available!</Warn>
-                      
-
+                      <Warn> You have no Whitelist available! </Warn>
                     </>
                     ):
                     (<SubTextLight>You Must be Connect to Mint</SubTextLight>)
