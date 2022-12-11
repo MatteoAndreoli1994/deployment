@@ -71,11 +71,17 @@ margin-top: 62vh;
 const TopContainer = styled.div`
 width:100vw;
 height:30vh;
-display: -webkit-flex;
+
+display: -webkit-box;
+
+display: -ms-flexbox;
+
 display: flex;
 position: absolute;
-justify-content: right;
--webkit-justify-content: right;
+-webkit-box-pack: right;
+-ms-flex-pack: right;
+        justify-content: right;
+
 
 @media (max-width: 60em){
     height:27vh;
