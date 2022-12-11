@@ -1,5 +1,5 @@
 import React from 'react'
-import GIF from "./Images/Gif.gif"
+
 import styled from 'styled-components'
 
 const VideoContainer = styled.div`
@@ -17,7 +17,7 @@ img{
 const CoverVideo = () => {
   return (
    <VideoContainer>
-        <img src={GIF} />
+        
    </VideoContainer>
   )
 }

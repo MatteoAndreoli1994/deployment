@@ -115,7 +115,6 @@ margin-left: 70%;
   }
 `
 
-
 const MinterContainer= styled.div`
 width:50%;
 padding-bottom:50%;
@@ -359,7 +358,7 @@ const MainMint = () => {
 
 
         <BotContainer>
-   
+
         </BotContainer>
         <Minting>
             <MinterContainer>
