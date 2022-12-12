@@ -14,7 +14,7 @@ text-align: center;
 display:flex;
 margin-left: 1%;
 margin-right: 1%;
-margin-top: 4%;
+margin-top: 1%;
 
 @media (max-width: 80em){
 
@@ -30,6 +30,7 @@ margin-top: 4%;
 
   text-align:center;
   font-size: ${props => props.theme.fontsm};
+  margin-top: 4%;
 }
 @media (max-height: 20em){
   margin-top: 0.8%;
@@ -61,7 +62,7 @@ margin: 1rem auto;
 
 `
 const Container = styled.div`
-width: 70%;
+width: 80%;
 min-height: 100vh;
 
 margin: 0 auto;
@@ -103,28 +104,29 @@ overflow: hidden;
 
 `
 const Descrizione = styled.p`
-font-size: ${props => props.theme.fontsm};
+font-size: ${props => props.theme.fontmd};
 
 display:flex;
-margin-left: 4%;
-margin-right: 4%;
-margin-top: 2%;
-margin-bottom: 1%;
+margin-left: 3%;
+margin-right: 3%;
+margin-top: 1%;
+margin-bottom: 2%;
 flex-direction: column;
 
 
 
 @media (max-width: 60em){
-  font-size: 0.1em;
+  font-size: ${props => props.theme.fontsm};
+  
 }
 
 @media (max-width: 40em){
-  font-size: 0.1em;
+  font-size: ${props => props.theme.fontxs};
 }
 
 @media (max-width: 30em){
-  font-size: 0.1em;
-
+  font-size: 0.2em;
+  margin-top: 2%;
 }
 
 @media (max-height: 20em){

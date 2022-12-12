@@ -7,7 +7,7 @@ export const light = {
     textRgba2:"0, 0, 0",
 
     carouselColor: '#EEEDDE',
-
+    fontxxs:'0.70em',
     fontxs:'0.75em',
     fontsm:'0.875em',
     fontmd:'1em', // 1em = 16px
