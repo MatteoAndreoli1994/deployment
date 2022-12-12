@@ -105,7 +105,7 @@ overflow: hidden;
 `
 const Descrizione = styled.p`
 font-size: ${props => props.theme.fontmd};
-
+color: #292929;
 display:flex;
 margin-left: 3%;
 margin-right: 3%;
