@@ -12,10 +12,15 @@ font-size: ${props => props.theme.fontxl};
 
 text-align: center;
 display:flex;
-margin-left: 2em;
-margin-right: 2em;
-margin-top: 0.5em;
+margin-left: 1%;
+margin-right: 1%;
+margin-top: 4%;
 
+@media (max-width: 80em){
+
+  text-align:center;
+  font-size: ${props => props.theme.fontlg};
+}
 @media (max-width: 60em){
 
   text-align:center;
@@ -24,12 +29,10 @@ margin-top: 0.5em;
 @media (max-width: 40em){
 
   text-align:center;
-  font-size: ${props => props.theme.fontmd};
+  font-size: ${props => props.theme.fontsm};
 }
-@media (max-width: 30em){
-
-  text-align:center;
-  font-size: 1em;
+@media (max-height: 20em){
+  margin-top: 0.8%;
 }
 `
 const Section = styled.section`
@@ -70,15 +73,15 @@ flex-direction: column;
 
 `
 const ContainerVignette = styled.div`
-width: 100vw;
-height: 90vh;
+width: 90%;
+height: 100vh;
 
 display: flex;
 justify-content: center;
 align-items: center;
 flex-direction: column;
 
-
+overflow: hidden;
 
 
 `
@@ -88,38 +91,25 @@ background-size:100% 100%;
 background-image: url(${Vignetta});
 display: inline-flex;
 
-max-width: 40vw;
-max-height: 40vw;
-margin: 1em;
+max-width: 100%;
+min-width: 90%;
+max-height: 17%;
+min-height: 15%;
+margin: 1.5%;
 align-items: center;
 
 flex-direction: column;
+overflow: hidden;
 
-@media (max-width: 60em){
-  max-width: 40vw;
-  margin: 0.1em;
-}
-@media (max-width: 40em){
-  max-width: 40vw;
-  margin: 0.5em;
-}
-@media (max-width: 30em){
-  max-width: 80vw;
-  
-  margin: 1em;
-}
-@media (max-width: 20em){
-  max-width: 80vw;
-  max-height: 70vw;
-  margin: 0.5em;
-  
-}
 `
 const Descrizione = styled.p`
 font-size: ${props => props.theme.fontsm};
 
 display:flex;
-margin: 2em;
+margin-left: 4%;
+margin-right: 4%;
+margin-top: 2%;
+margin-bottom: 1%;
 flex-direction: column;
 
 
@@ -137,6 +127,9 @@ flex-direction: column;
 
 }
 
+@media (max-height: 20em){
+  margin-top: 0%;
+}
 `
 const Link = styled.a`
 
@@ -155,7 +148,7 @@ const Roadmap = () => {
 
             <Test>
               <TitoloVignetta>
-                1ST FASE ALLOWLIST
+                1ST ALLOWLIST
               </TitoloVignetta>
               <Descrizione>Early stage of the project, 20 AllowList earned through giveaways and raffle.</Descrizione>
 
@@ -163,7 +156,7 @@ const Roadmap = () => {
 
             <Test>
               <TitoloVignetta>
-                2ND FASE ALLOWLIST
+                2ND ALLOWLIST
               </TitoloVignetta>
               <Descrizione>Interactive phase, development of a gaming hub to grant the latest 180 WhiteList to the most talented gamer or artist.</Descrizione>
 
@@ -186,7 +179,7 @@ const Roadmap = () => {
             </Test>
             <Test>
               <TitoloVignetta>
-              Release of Roadmap 2.0
+              RELEASE OF ROADMAP 2.0
               </TitoloVignetta>
               <Descrizione>New Secret experiment.</Descrizione>
               
