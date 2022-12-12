@@ -12,8 +12,8 @@ font-size: ${props => props.theme.fontxl};
 
 text-align: center;
 display:flex;
-margin-left: 1%;
-margin-right: 1%;
+margin-left: 3%;
+margin-right: 2%;
 margin-top: 1%;
 
 @media (max-width: 80em){
@@ -24,12 +24,12 @@ margin-top: 1%;
 @media (max-width: 60em){
 
   text-align:center;
-  font-size: ${props => props.theme.fontmd};
+  font-size: ${props => props.theme.fontlg};
 }
 @media (max-width: 40em){
 
   text-align:center;
-  font-size: ${props => props.theme.fontsm};
+  font-size: ${props => props.theme.fontlg};
   margin-top: 4%;
 }
 @media (max-height: 20em){
@@ -93,9 +93,9 @@ background-image: url(${Vignetta});
 display: inline-flex;
 
 max-width: 100%;
-min-width: 90%;
-max-height: 17%;
-min-height: 15%;
+min-width: 60%;
+max-height: 19%;
+min-height: 13%;
 margin: 1.5%;
 align-items: center;
 
@@ -110,13 +110,13 @@ display:flex;
 margin-left: 3%;
 margin-right: 3%;
 margin-top: 1%;
-margin-bottom: 2%;
+margin-bottom: 4%;
 flex-direction: column;
 
 
 
 @media (max-width: 60em){
-  font-size: ${props => props.theme.fontsm};
+  font-size: ${props => props.theme.fontxs};
   
 }
 
@@ -125,7 +125,7 @@ flex-direction: column;
 }
 
 @media (max-width: 30em){
-  font-size: 0.2em;
+  font-size: ${props => props.theme.fontxs};
   margin-top: 2%;
 }
 
