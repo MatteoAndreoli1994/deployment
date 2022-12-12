@@ -1,10 +1,11 @@
 
-import React from 'react'
+import React, { useEffect } from 'react'
 import styled from 'styled-components'
 import DrawSvg from '../DrawSvg'
 import Image from "../../assets/background/night.png"
 import Vignetta from "../../assets/elements/Vignetta.png"
-
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 
 const TitoloVignetta = styled.h2`
@@ -138,25 +139,28 @@ const Link = styled.a`
 `
 
 const Roadmap = () => {
+    useEffect(()=> {
+      Aos.init({duration: 2000});
+    }, []);
+
   return (
     <Section id="roadmap">
-
       <Title>
       Roadmap
       </Title>
 
       <Container>
         <ContainerVignette>
-
-            <Test>
+ 
+            <Test data-aos="zoom-in">
               <TitoloVignetta>
                 1ST ALLOWLIST
               </TitoloVignetta>
               <Descrizione>Early stage of the project, 20 AllowList earned through giveaways and raffle.</Descrizione>
-
+        
             </Test>
 
-            <Test>
+            <Test data-aos="zoom-in">
               <TitoloVignetta>
                 2ND ALLOWLIST
               </TitoloVignetta>
@@ -164,7 +168,7 @@ const Roadmap = () => {
 
             </Test>
 
-            <Test>
+            <Test data-aos="zoom-in">
               <TitoloVignetta>
                 MINT
               </TitoloVignetta>
@@ -172,14 +176,14 @@ const Roadmap = () => {
               
             </Test>
 
-            <Test>
+            <Test data-aos="zoom-in">
               <TitoloVignetta>
                 GBCC WEBGAME
               </TitoloVignetta>
               <Descrizione>Release of our main mini-game project for all GBCC Holders.</Descrizione>
               
             </Test>
-            <Test>
+            <Test data-aos="zoom-in">
               <TitoloVignetta>
               RELEASE OF ROADMAP 2.0
               </TitoloVignetta>
