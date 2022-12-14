@@ -9,7 +9,7 @@ const Section = styled.section`
 width:100vw;
 height:100vh;
 
-background-color: #83B270;
+background-color: #F7CACD;
 position: relative;
 overflow: hidden;
 display: flex;

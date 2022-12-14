@@ -44,7 +44,7 @@ const Section = styled.div`
 
 
 width:100vw;
-background-color: #58C0BA;
+background-color: ${props => props.theme.body};
 position: relative;
 display: flex;
 
@@ -55,12 +55,12 @@ align-items: center;
 `
 const MenuSocial = styled.div`
 
-margin-top: 1.5em;
+
 width: 80%;
 display:flex;
 align-item: center;
 justify-content: center;
-margin: 2rem auto;
+margin: 1.2rem auto;
 width: 10%;
 
 
@@ -111,7 +111,7 @@ const Footer = () => {
       <Container>
 
         <DivTesto2>
-          <img style={{ width: 210, height: 60 }} src={Logo}/>
+          <img style={{ width: 250, height: 85 }} src={Logo}/>
         </DivTesto2>
 
         <MenuSocial>
