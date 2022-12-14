@@ -54,7 +54,7 @@ border-radius: 20px;
 
 
 
-@media (max-width: 30em){
+@media (max-width: 25em){
   width: 6.67em;
   height: 12em;
   }
@@ -87,7 +87,7 @@ img{
   border-radius: 18px;
   transition: all 0.3s ease;
 }
-@media (max-width: 30em){
+@media (max-width: 25em){
   width:6.7em;
   }
 
