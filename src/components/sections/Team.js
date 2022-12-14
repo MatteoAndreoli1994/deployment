@@ -58,6 +58,13 @@ border-radius: 20px;
   width: 6.67em;
   height: 12em;
   }
+  @media (max-height: 30em){
+    transform: scale(0.8);
+    }
+    @media (max-height: 25em){
+      transform: scale(0.6);
+      }
+
 `
 const ImageContainer =styled.div`
 width:10em;
@@ -83,6 +90,8 @@ img{
 @media (max-width: 30em){
   width:6.7em;
   }
+
+
 `
 const Name = styled.h2`
 font-size: ${props => props.theme.fontlg}
@@ -97,6 +106,7 @@ text-align: center;
 @media (max-width: 30em){
   font-size: ${props => props.theme.fontmd}
   }
+
 `
 const Position = styled.h2`
 font-size: ${props => props.theme.fontlg}
