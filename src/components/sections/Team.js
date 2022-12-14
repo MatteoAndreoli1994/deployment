@@ -54,10 +54,9 @@ border-radius: 20px;
 
 
 
-@media (max-width: 50em){
-  width: 35vw;
-  height: 35vh;
-
+@media (max-width: 30em){
+  width: 6.67em;
+  height: 12em;
   }
 `
 const ImageContainer =styled.div`
@@ -81,11 +80,8 @@ img{
   border-radius: 18px;
   transition: all 0.3s ease;
 }
-@media (max-width: 50em){
-  width: 35vw;
-  
-
-
+@media (max-width: 30em){
+  width:6.7em;
   }
 `
 const Name = styled.h2`
@@ -98,9 +94,12 @@ color: black;
 margin-top: 1rem;
 text-align: center;
 
+@media (max-width: 30em){
+  font-size: ${props => props.theme.fontmd}
+  }
 `
 const Position = styled.h2`
-font-size: 21px;
+font-size: ${props => props.theme.fontlg}
 display: flex;
 text-align: center;
 align-items: center;
@@ -109,8 +108,12 @@ text-transform: capitalize;
 color: white;
 margin-top: 1rem;
 font-weight: 400;
-color: ${props => `rgba(${props.theme.textRgba2},0.6)`}
+color: ${props => `rgba(${props.theme.textRgba2},0.6)`};
 
+@media (max-width: 30em){
+  font-size: ${props => props.theme.fontmd};
+  margin-top: 0.5rem;
+  }
 
 `
 

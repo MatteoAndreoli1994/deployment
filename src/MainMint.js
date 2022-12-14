@@ -156,7 +156,7 @@ background-size:100% 100%;
 background-image: url(${Gameboy});
 background-position:center;
 
-@media (max-width: 50em){
+@media (max-width: 30em){
     width:130%;
     padding-bottom:130%;
     background-size: 130%;
@@ -180,7 +180,7 @@ background-size: cover;
 &:active{
     transform: scale(1.6);
 }
-@media (max-width: 50em){
+@media (max-width: 30em){
   background-image: url(${TastoA});
   width:14%;
   padding-bottom:14%;
@@ -206,7 +206,7 @@ background-size: cover;
     background-image: none;
     
 }
-@media (max-width: 50em){
+@media (max-width: 30em){
 background-image: url(${Sinistra_mobile});
 width:8%;
 padding-bottom:8%;
@@ -231,7 +231,7 @@ background-size: cover;
     background-image: none;
     
 }
-@media (max-width: 50em){
+@media (max-width: 30em){
   background-image: url(${Destra_mobile});
   width:7.5%;
   padding-bottom:7.5%;
@@ -265,7 +265,7 @@ justify-content: center;
 text-align: center;
 
 
-@media (max-width: 50em){
+@media (max-width: 30em){
   transform: rotate(0deg);
   width:42%;
   height:18.5%;
@@ -278,6 +278,24 @@ text-align: center;
 const SubText = styled.p`
 font-size: ${props => props.theme.fonts};
 font-weight: 400;
+
+@media (max-width: 60em){
+  font-size: ${props => props.theme.fontxs};
+  
+}
+
+@media (max-width: 40em){
+  font-size: ${props => props.theme.fontxxs};
+}
+
+@media (max-width: 30em){
+  font-size: ${props => props.theme.fontxl};
+  margin-top: 2%;
+}
+
+@media (max-height: 20em){
+  margin-top: 0%;
+}
 `
 const Warn = styled.p`
 font-size: ${props => props.theme.fonts};
@@ -396,13 +414,12 @@ const MainMint = () => {
         <Minting>
             <MinterContainer>
             <SubTextContainer> 
-            {allowListData}
+
                 <SubText>
                 {isConnected && allowListData? (
                   
                         <Display>
-                                <SubTextLight>MINT {Wl}</SubTextLight>
-                                <SubTextLight>Chose how many nft you want to mint using the arrows. Press A to mint.</SubTextLight>
+                                <SubTextLight>How many?</SubTextLight>
                                 <MintAmount type="number" value={mintAmount}/>
                         </Display>
                       
