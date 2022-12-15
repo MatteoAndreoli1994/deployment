@@ -3,19 +3,28 @@ import styled from 'styled-components'
 import Woods from "../../assets/background/Woods.png"
 import img1 from "../../assets/nfts/NoFlockin.jpg"
 import img2 from "../../assets/nfts/Chri.jpg"
-import img3 from "../../assets/nfts/Brasi.jpg"
+import drawn from "../../assets/elements/drawn_bg.png"
+
 const Section = styled.section`
 
 width:100vw;
 height:100vh;
 
-background-color: #F7CACD;
+background-color: #DBBCFF;
 position: relative;
 overflow: hidden;
 display: flex;
 flex-direction: column;
+object-fit: cover;
+background-size: cover;
+background-image: url(${drawn});
+background-position:center;
 
+.bg-image {
+  opacity: 0.7;
+}
 `
+
 
 const Title = styled.h1`
 font-size: ${props => props.theme.fontxxl};
@@ -143,7 +152,7 @@ const MemberComponent = ({img, name="", position=""}) => {
 
 const Team = () => {
   return (
-    <Section id="team">
+    <Section id="team" >
       <Title> Team</Title>
       <Container>
           <MemberComponent img={img1} name="Matteo" position="Code Developer"/>
