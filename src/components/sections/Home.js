@@ -24,7 +24,7 @@ align-items:center;
   width: 85%;
 }
 @media (max-width: 48em){
-  flex-direction: column-reverse;
+  flex-direction: column;
 
   &>*:first-child{
     width: 100%;
@@ -47,6 +47,8 @@ margin: 1%;
   width: 100%;
     margin: 0 auto;
     margin-bottom: 1rem;
+    
+  
 
 }
 `
@@ -65,7 +67,7 @@ border-style: solid;
 border-color: white;
 
 @media (max-width: 48em){
-  width: 80%;
+  width: 100%;
 
 } 
 
@@ -77,6 +79,7 @@ export const Home = () => {
       <Container>
       <Box> <TypeWriterText/> </Box>
       <Box2> <CoverVideo/> </Box2>
+
       </Container>
       
     </Section>

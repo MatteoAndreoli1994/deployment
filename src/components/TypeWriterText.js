@@ -7,7 +7,7 @@ import Button from './Button';
 const Title = styled.h2`
 font-size: ${props => props.theme.fontxxl};
 text-transform: capitalize;
-width: 80%;
+width: 100%;
 align-self:flex-start;
 margin: 2%;
 
@@ -22,13 +22,13 @@ margin: 2%;
   font-size: ${props => props.theme.fontl};
   margin: 1rem auto;
   align-self: center;
-  text-align: center;
+ 
 }
 `
 const Subtitle = styled.h1`
 font-size: 2em;
 text-trasform: capitalize;
-width: 80%;
+width: 100%;
 align-self:flex-start;
 margin-top: 1em;
 margin: 2%;
@@ -39,7 +39,6 @@ margin: 2%;
 }
 @media (max-width: 48em){
   align-self: center;
-  text-align: center;
 
  
 }
@@ -47,11 +46,11 @@ margin: 2%;
 const ButtonContainer = styled.div`
 width: 100%;
 margin-top: 1em;
-margin: 4%;
+margin: 2%;
 @media (max-width: 48em){
-
+  margin-left: 4%;
   align-self: center;
-  text-align: center;
+ 
 } 
 `
 
@@ -62,7 +61,7 @@ export const TypeWriterText = () => {
     
     <Title>
         
-    Welcome to GameBoyz Color Club World
+    Welcome  <br></br> to<br></br> GameBoyz Color Club
         
     </Title>
     
