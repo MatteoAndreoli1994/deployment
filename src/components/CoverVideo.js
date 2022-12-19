@@ -3,7 +3,7 @@ import GIF from "./Images/GIF.gif"
 import styled from 'styled-components'
 
 const VideoContainer = styled.div`
-
+margin: 4%;
 `
 
 

@@ -40,7 +40,7 @@ margin: 2%;
 @media (max-width: 48em){
   align-self: center;
   text-align: center;
-  margin: 1em auto;
+
  
 }
 `
