@@ -40,6 +40,8 @@ height: 100%;
 display: flex;
 flex-direction: column;
 Justify-content: center;
+margin: 1%;
+
 
 @media (max-width: 64em){
   width: 100%;
@@ -51,10 +53,16 @@ Justify-content: center;
 const Box2 = styled.div`
 width: 50%;
 height: 100%;
+margin: 1%;
+background-color: #F9F9F9;
+background: rgba(249,249,249,0.5);
 display: flex;
 flex-direction: column;
 align-items:center;
 Justify-content: center;
+border-radius: 15px 50px;
+border-style: solid;
+border-color: white;
 
 @media (max-width: 48em){
   width: 80%;

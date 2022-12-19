@@ -9,6 +9,7 @@ font-size: ${props => props.theme.fontxxl};
 text-transform: capitalize;
 width: 80%;
 align-self:flex-start;
+margin: 2%;
 
 @media (max-width: 80em){
   font-size: 2.5em;
@@ -30,6 +31,7 @@ text-trasform: capitalize;
 width: 80%;
 align-self:flex-start;
 margin-top: 1em;
+margin: 2%;
 
 @media (max-width: 70em){
   font-size: 1em;
@@ -45,8 +47,9 @@ margin-top: 1em;
 const ButtonContainer = styled.div`
 width: 100%;
 margin-top: 1em;
+margin: 4%;
 @media (max-width: 48em){
-  margin: 0;
+
   align-self: center;
   text-align: center;
 } 

@@ -5,7 +5,7 @@ import "swiper/css";
 import "swiper/css/effect-cards";
 import "swiper/css/pagination"
 import "swiper/css/navigation"
-
+import arrow from "../assets/elements/arrow.jpeg"
 
 import { Pagination, Navigation, Autoplay, EffectCards } from "swiper";
 
@@ -41,6 +41,33 @@ img{
   display: flex;
   justify-content; center;
   align-items: center;
+}
+
+.swiper-button-next{
+  color: blue;
+  right: 0;
+  width: 4rem;
+  background-image: url(${arrow});
+  background-position: center;
+  background-size: cover;
+
+  &:after{
+    display: none;
+  }
+}
+
+.swiper-button-prev{
+  color: blue;
+  left : 0;
+  width: 4rem;
+  transform: rotate(180deg);
+  background-image: url(${arrow});
+  background-position: center;
+  background-size: cover;
+
+  &:after{
+    display: none;
+  }
 }
 `
 
