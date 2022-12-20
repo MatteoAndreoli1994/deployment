@@ -8,7 +8,8 @@ import { ethers, BigNumber} from 'ethers';
 import GameBoyzColorClubTestFinal from '../GameBoyzColorClubTestFinal.json';
 
 const VideoContainer = styled.div`
-margin: 10%;
+
+
 
 `
 

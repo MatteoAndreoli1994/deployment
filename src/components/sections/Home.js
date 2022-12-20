@@ -35,12 +35,12 @@ align-items:center;
 } 
 `
 const Box = styled.div`
-width: 50%;
+
 height: 100%;
 display: flex;
 flex-direction: column;
 Justify-content: center;
-margin: 1%;
+
 
 
 @media (max-width: 64em){
@@ -54,10 +54,10 @@ margin: 1%;
 `
 const Box2 = styled.div`
 
-width: 50%;
-height: 100%;
-margin: 1%;
-background-color: #F9F9F9;
+
+height: 30vh;
+width: 30vw;
+
 background: rgba(249,249,249,0.5);
 display: flex;
 flex-direction: column;
@@ -66,9 +66,9 @@ Justify-content: center;
 border-radius: 15px 50px;
 border-style: solid;
 border-color: white;
-
+margin: 2%;
 @media (max-width: 48em){
-  width: 100%;
+  width: 75vw;
 
 } 
 
