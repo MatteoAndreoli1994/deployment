@@ -99,7 +99,11 @@ export const Home = () => {
         </Box2>
 
         <Box2> 
-          <CoverVideo/> 
+          <h1>Giveaways:</h1>
+          <p>25% - 3 BadSeeds</p>
+          <p>50% - 3 LittleGhost</p>
+          <p>75% - 3 MoonPets </p>
+          <p>100% - 1 PancakeSquad, 1000$ </p>
         </Box2>
 
       </ColumnContainer>
