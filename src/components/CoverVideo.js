@@ -1,23 +1,43 @@
-import React from 'react'
-import GIF from "./Images/GIF.gif"
-import styled from 'styled-components'
+import React from 'react';
+import GIF from "./Images/GIF.gif";
+import styled from 'styled-components';
+import ProgressBar from './Progress';
+import { useContractRead } from 'wagmi'
+import { useState, useEffect } from "react";
+import { ethers, BigNumber} from 'ethers';
+import GameBoyzColorClubTestFinal from '../GameBoyzColorClubTestFinal.json';
 
 const VideoContainer = styled.div`
-margin: 6%;
+margin: 10%;
+
 `
 
 
 const CoverVideo = () => {
+  const [supplyData, setSupplyData] = useState(0);
+
+  const { data: totalSupplyData} = useContractRead({
+    address: '0xfB03f8cf7c8C3A59937D183eEc9f15d81C877a72',
+    abi: GameBoyzColorClubTestFinal.abi,
+    functionName: "totalSupply",
+    watch: true,
+  });
+
+  useEffect(() => {
+    if (totalSupplyData) {
+      let temp = totalSupplyData / (1);
+      setSupplyData(temp);
+    }
+  }, [totalSupplyData]);
+
   return (
+    
+
+
    <VideoContainer>
-<h1>Supply Data</h1>
-<p>(//////////|/////-----|----------|----------)</p>
-<p>Minted: 33%</p>
-<p>Giveaways:</p>
-<p>25% - 1 BadSeeds & 100$</p>
-<p>50% - 1 LittleGhost & 100$</p>
-<p>75% - 1 Kalmy NFT & 100$</p>
-<p>100% - 1 Pancake Squad & 500$</p>
+<h1>On-chain Data:</h1>
+<ProgressBar value={supplyData} max={100} />
+<p>Nfts Minted: {supplyData}%</p>
    </VideoContainer>
   )
 }

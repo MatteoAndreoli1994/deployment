@@ -53,6 +53,7 @@ margin: 1%;
 }
 `
 const Box2 = styled.div`
+
 width: 50%;
 height: 100%;
 margin: 1%;
@@ -73,12 +74,33 @@ border-color: white;
 
 `
 
+const ColumnContainer = styled.div`
+width: 50%;
+height: 100%;
+
+justify-content: center;
+align-items: center;
+display: flex;
+flex-direction: column;
+`
+
 export const Home = () => {
   return (
     <Section id="home">
       <Container>
       <Box> <TypeWriterText/> </Box>
-      <Box2> <CoverVideo/> </Box2>
+      <ColumnContainer>
+
+        <Box2> 
+          <CoverVideo/> 
+        </Box2>
+
+        <Box2> 
+          <CoverVideo/> 
+        </Box2>
+
+      </ColumnContainer>
+      
 
       </Container>
       
