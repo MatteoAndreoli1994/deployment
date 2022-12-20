@@ -11,8 +11,8 @@ background-color: #F1F5F3;
 color: black;
 outline: none;
 border: none;
-height:60px;
-width:60px;
+height:50px;
+width:50px;
 margin: 0.5rem;
 border-radius: 50%;
 cursor: pointer;
@@ -60,7 +60,7 @@ width: 80%;
 display:flex;
 align-item: center;
 justify-content: center;
-margin: 1.2rem auto;
+margin: 1vh;
 width: 10%;
 
 
@@ -93,7 +93,7 @@ display: flex;
 `
 const DivTesto2 = styled.div`
 width: 80%;
-margin-top: 2em;
+margin-top: 3vh;
 
 justify-content: center;
 align-items:center;
@@ -115,12 +115,12 @@ const Footer = () => {
       <Container>
 
         <DivTesto2>
-          <img style={{ width: 250, height: 85 }} src={Logo}/>
+          <img style={{ width: 200, height: 64 }} src={Logo}/>
         </DivTesto2>
 
         <MenuSocial>
-        <Btn type="submit"><img style={{ width: 60, height: 60 }} src={Twitter} alt=""/></Btn>
-        <Btn type="submit"><img style={{ width: 60, height: 60 }} src={Telegram} alt=""/></Btn>
+        <Btn type="submit"><img style={{ width: 50, height: 50 }} src={Twitter} alt=""/></Btn>
+        <Btn type="submit"><img style={{ width: 50, height: 50 }} src={Telegram} alt=""/></Btn>
         </MenuSocial>
 
         <DivTesto>
