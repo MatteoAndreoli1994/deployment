@@ -101,6 +101,10 @@ display: flex;
 `
 const Testo = styled.h4`
 font-size: 15px;
+
+@media (max-width: 64em){
+  font-size: 10px;
+}
 `
 const ListUnlisted = styled.ul``
 
@@ -120,7 +124,7 @@ const Footer = () => {
         </MenuSocial>
 
         <DivTesto>
-          <h4>© 2022 GBCC. All Rights Reserved.</h4>
+          <Testo>© 2022 GBCC. All Rights Reserved.</Testo>
         </DivTesto>
 
       </Container>
